@@ -94,4 +94,4 @@ $(objsdir)/%.o: %.c
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
-	-rm -rf $(exe) $(objsdir) libelf.so ../common/native-elf-format.h
+	-rm -rf $(exe) $(objsdir) libelf.so ../common/native-elf-format.h libelf_fsize.c libelf_msize.c libelf_convert.c
