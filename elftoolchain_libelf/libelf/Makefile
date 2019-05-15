@@ -1,7 +1,7 @@
 .PHONY: all clean
 
 CC:=gcc
-CFLAGS:=-Wall -g3 -ggdb -fPIC  
+CFLAGS:=-save-temps=obj -Wall -g3 -ggdb -fPIC  
 CFLAGS+= -I. -I../common
 LDFLAGS:=
 LDLIBS:=
