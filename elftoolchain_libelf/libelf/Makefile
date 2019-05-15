@@ -90,7 +90,6 @@ $(objsdir):
 	@mkdir -p $@
 
 $(objsdir)/%.o: %.c
-	$(CC) -E $(CFLAGS) -o $@.i $<	
 	$(CC) $(CFLAGS) -c -o $@ $<
 
 clean:
