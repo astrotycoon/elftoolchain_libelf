@@ -1,0 +1,1659 @@
+make --no-print-directory all-recursive
+Making all in config
+make[2]: Nothing to be done for 'all'.
+Making all in m4
+make[2]: Nothing to be done for 'all'.
+Making all in lib
+  CC       crc32.o
+  CC       next_prime.o
+  CC       crc32_file.o
+  CC       color.o
+  CC       printversion.o
+  CC       xstrndup.o
+  CC       xmalloc.o
+  CC       xstrdup.o
+  AR       libeu.a
+Making all in libelf
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_version.o -MD -MP -MF .deps/elf_version.Tpo -c -o elf_version.o elf_version.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_hash.o -MD -MP -MF .deps/elf_hash.Tpo -c -o elf_hash.o elf_hash.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_error.o -MD -MP -MF .deps/elf_error.Tpo -c -o elf_error.o elf_error.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_fill.o -MD -MP -MF .deps/elf_fill.Tpo -c -o elf_fill.o elf_fill.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_begin.o -MD -MP -MF .deps/elf_begin.Tpo -c -o elf_begin.o elf_begin.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_next.o -MD -MP -MF .deps/elf_next.Tpo -c -o elf_next.o elf_next.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_rand.o -MD -MP -MF .deps/elf_rand.Tpo -c -o elf_rand.o elf_rand.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_end.o -MD -MP -MF .deps/elf_end.Tpo -c -o elf_end.o elf_end.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_kind.o -MD -MP -MF .deps/elf_kind.Tpo -c -o elf_kind.o elf_kind.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getclass.o -MD -MP -MF .deps/gelf_getclass.Tpo -c -o gelf_getclass.o gelf_getclass.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getbase.o -MD -MP -MF .deps/elf_getbase.Tpo -c -o elf_getbase.o elf_getbase.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getident.o -MD -MP -MF .deps/elf_getident.Tpo -c -o elf_getident.o elf_getident.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_fsize.o -MD -MP -MF .deps/elf32_fsize.Tpo -c -o elf32_fsize.o elf32_fsize.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_fsize.o -MD -MP -MF .deps/elf64_fsize.Tpo -c -o elf64_fsize.o elf64_fsize.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_fsize.o -MD -MP -MF .deps/gelf_fsize.Tpo -c -o gelf_fsize.o gelf_fsize.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_xlatetof.o -MD -MP -MF .deps/elf32_xlatetof.Tpo -c -o elf32_xlatetof.o elf32_xlatetof.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_xlatetom.o -MD -MP -MF .deps/elf32_xlatetom.Tpo -c -o elf32_xlatetom.o elf32_xlatetom.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_xlatetof.o -MD -MP -MF .deps/elf64_xlatetof.Tpo -c -o elf64_xlatetof.o elf64_xlatetof.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_xlatetom.o -MD -MP -MF .deps/elf64_xlatetom.Tpo -c -o elf64_xlatetom.o elf64_xlatetom.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_xlate.o -MD -MP -MF .deps/gelf_xlate.Tpo -c -o gelf_xlate.o gelf_xlate.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_getehdr.o -MD -MP -MF .deps/elf32_getehdr.Tpo -c -o elf32_getehdr.o elf32_getehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_getehdr.o -MD -MP -MF .deps/elf64_getehdr.Tpo -c -o elf64_getehdr.o elf64_getehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getehdr.o -MD -MP -MF .deps/gelf_getehdr.Tpo -c -o gelf_getehdr.o gelf_getehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_newehdr.o -MD -MP -MF .deps/elf32_newehdr.Tpo -c -o elf32_newehdr.o elf32_newehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_newehdr.o -MD -MP -MF .deps/elf64_newehdr.Tpo -c -o elf64_newehdr.o elf64_newehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_newehdr.o -MD -MP -MF .deps/gelf_newehdr.Tpo -c -o gelf_newehdr.o gelf_newehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_ehdr.o -MD -MP -MF .deps/gelf_update_ehdr.Tpo -c -o gelf_update_ehdr.o gelf_update_ehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_getphdr.o -MD -MP -MF .deps/elf32_getphdr.Tpo -c -o elf32_getphdr.o elf32_getphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_getphdr.o -MD -MP -MF .deps/elf64_getphdr.Tpo -c -o elf64_getphdr.o elf64_getphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getphdr.o -MD -MP -MF .deps/gelf_getphdr.Tpo -c -o gelf_getphdr.o gelf_getphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_newphdr.o -MD -MP -MF .deps/elf32_newphdr.Tpo -c -o elf32_newphdr.o elf32_newphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_newphdr.o -MD -MP -MF .deps/elf64_newphdr.Tpo -c -o elf64_newphdr.o elf64_newphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_newphdr.o -MD -MP -MF .deps/gelf_newphdr.Tpo -c -o gelf_newphdr.o gelf_newphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_phdr.o -MD -MP -MF .deps/gelf_update_phdr.Tpo -c -o gelf_update_phdr.o gelf_update_phdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getarhdr.o -MD -MP -MF .deps/elf_getarhdr.Tpo -c -o elf_getarhdr.o elf_getarhdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getarsym.o -MD -MP -MF .deps/elf_getarsym.Tpo -c -o elf_getarsym.o elf_getarsym.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_rawfile.o -MD -MP -MF .deps/elf_rawfile.Tpo -c -o elf_rawfile.o elf_rawfile.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_readall.o -MD -MP -MF .deps/elf_readall.Tpo -c -o elf_readall.o elf_readall.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_cntl.o -MD -MP -MF .deps/elf_cntl.Tpo -c -o elf_cntl.o elf_cntl.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getscn.o -MD -MP -MF .deps/elf_getscn.Tpo -c -o elf_getscn.o elf_getscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_nextscn.o -MD -MP -MF .deps/elf_nextscn.Tpo -c -o elf_nextscn.o elf_nextscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_ndxscn.o -MD -MP -MF .deps/elf_ndxscn.Tpo -c -o elf_ndxscn.o elf_ndxscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_newscn.o -MD -MP -MF .deps/elf_newscn.Tpo -c -o elf_newscn.o elf_newscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_getshdr.o -MD -MP -MF .deps/elf32_getshdr.Tpo -c -o elf32_getshdr.o elf32_getshdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_getshdr.o -MD -MP -MF .deps/elf64_getshdr.Tpo -c -o elf64_getshdr.o elf64_getshdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getshdr.o -MD -MP -MF .deps/gelf_getshdr.Tpo -c -o gelf_getshdr.o gelf_getshdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_shdr.o -MD -MP -MF .deps/gelf_update_shdr.Tpo -c -o gelf_update_shdr.o gelf_update_shdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_strptr.o -MD -MP -MF .deps/elf_strptr.Tpo -c -o elf_strptr.o elf_strptr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_rawdata.o -MD -MP -MF .deps/elf_rawdata.Tpo -c -o elf_rawdata.o elf_rawdata.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getdata.o -MD -MP -MF .deps/elf_getdata.Tpo -c -o elf_getdata.o elf_getdata.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_newdata.o -MD -MP -MF .deps/elf_newdata.Tpo -c -o elf_newdata.o elf_newdata.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getdata_rawchunk.o -MD -MP -MF .deps/elf_getdata_rawchunk.Tpo -c -o elf_getdata_rawchunk.o elf_getdata_rawchunk.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_flagelf.o -MD -MP -MF .deps/elf_flagelf.Tpo -c -o elf_flagelf.o elf_flagelf.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_flagehdr.o -MD -MP -MF .deps/elf_flagehdr.Tpo -c -o elf_flagehdr.o elf_flagehdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_flagphdr.o -MD -MP -MF .deps/elf_flagphdr.Tpo -c -o elf_flagphdr.o elf_flagphdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_flagscn.o -MD -MP -MF .deps/elf_flagscn.Tpo -c -o elf_flagscn.o elf_flagscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_flagshdr.o -MD -MP -MF .deps/elf_flagshdr.Tpo -c -o elf_flagshdr.o elf_flagshdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_flagdata.o -MD -MP -MF .deps/elf_flagdata.Tpo -c -o elf_flagdata.o elf_flagdata.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_memory.o -MD -MP -MF .deps/elf_memory.Tpo -c -o elf_memory.o elf_memory.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_update.o -MD -MP -MF .deps/elf_update.Tpo -c -o elf_update.o elf_update.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_updatenull.o -MD -MP -MF .deps/elf32_updatenull.Tpo -c -o elf32_updatenull.o elf32_updatenull.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_updatenull.o -MD -MP -MF .deps/elf64_updatenull.Tpo -c -o elf64_updatenull.o elf64_updatenull.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_updatefile.o -MD -MP -MF .deps/elf32_updatefile.Tpo -c -o elf32_updatefile.o elf32_updatefile.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_updatefile.o -MD -MP -MF .deps/elf64_updatefile.Tpo -c -o elf64_updatefile.o elf64_updatefile.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getsym.o -MD -MP -MF .deps/gelf_getsym.Tpo -c -o gelf_getsym.o gelf_getsym.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_sym.o -MD -MP -MF .deps/gelf_update_sym.Tpo -c -o gelf_update_sym.o gelf_update_sym.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getversym.o -MD -MP -MF .deps/gelf_getversym.Tpo -c -o gelf_getversym.o gelf_getversym.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getverneed.o -MD -MP -MF .deps/gelf_getverneed.Tpo -c -o gelf_getverneed.o gelf_getverneed.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getvernaux.o -MD -MP -MF .deps/gelf_getvernaux.Tpo -c -o gelf_getvernaux.o gelf_getvernaux.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getverdef.o -MD -MP -MF .deps/gelf_getverdef.Tpo -c -o gelf_getverdef.o gelf_getverdef.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getverdaux.o -MD -MP -MF .deps/gelf_getverdaux.Tpo -c -o gelf_getverdaux.o gelf_getverdaux.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getrel.o -MD -MP -MF .deps/gelf_getrel.Tpo -c -o gelf_getrel.o gelf_getrel.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getrela.o -MD -MP -MF .deps/gelf_getrela.Tpo -c -o gelf_getrela.o gelf_getrela.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_rel.o -MD -MP -MF .deps/gelf_update_rel.Tpo -c -o gelf_update_rel.o gelf_update_rel.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_rela.o -MD -MP -MF .deps/gelf_update_rela.Tpo -c -o gelf_update_rela.o gelf_update_rela.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getdyn.o -MD -MP -MF .deps/gelf_getdyn.Tpo -c -o gelf_getdyn.o gelf_getdyn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_dyn.o -MD -MP -MF .deps/gelf_update_dyn.Tpo -c -o gelf_update_dyn.o gelf_update_dyn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getmove.o -MD -MP -MF .deps/gelf_getmove.Tpo -c -o gelf_getmove.o gelf_getmove.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_move.o -MD -MP -MF .deps/gelf_update_move.Tpo -c -o gelf_update_move.o gelf_update_move.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getsyminfo.o -MD -MP -MF .deps/gelf_getsyminfo.Tpo -c -o gelf_getsyminfo.o gelf_getsyminfo.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_syminfo.o -MD -MP -MF .deps/gelf_update_syminfo.Tpo -c -o gelf_update_syminfo.o gelf_update_syminfo.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getauxv.o -MD -MP -MF .deps/gelf_getauxv.Tpo -c -o gelf_getauxv.o gelf_getauxv.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_auxv.o -MD -MP -MF .deps/gelf_update_auxv.Tpo -c -o gelf_update_auxv.o gelf_update_auxv.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getnote.o -MD -MP -MF .deps/gelf_getnote.Tpo -c -o gelf_getnote.o gelf_getnote.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_xlatetof.o -MD -MP -MF .deps/gelf_xlatetof.Tpo -c -o gelf_xlatetof.o gelf_xlatetof.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_xlatetom.o -MD -MP -MF .deps/gelf_xlatetom.Tpo -c -o gelf_xlatetom.o gelf_xlatetom.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT nlist.o -MD -MP -MF .deps/nlist.Tpo -c -o nlist.o nlist.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getsymshndx.o -MD -MP -MF .deps/gelf_getsymshndx.Tpo -c -o gelf_getsymshndx.o gelf_getsymshndx.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_symshndx.o -MD -MP -MF .deps/gelf_update_symshndx.Tpo -c -o gelf_update_symshndx.o gelf_update_symshndx.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_versym.o -MD -MP -MF .deps/gelf_update_versym.Tpo -c -o gelf_update_versym.o gelf_update_versym.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_verneed.o -MD -MP -MF .deps/gelf_update_verneed.Tpo -c -o gelf_update_verneed.o gelf_update_verneed.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_vernaux.o -MD -MP -MF .deps/gelf_update_vernaux.Tpo -c -o gelf_update_vernaux.o gelf_update_vernaux.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_verdef.o -MD -MP -MF .deps/gelf_update_verdef.Tpo -c -o gelf_update_verdef.o gelf_update_verdef.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_verdaux.o -MD -MP -MF .deps/gelf_update_verdaux.Tpo -c -o gelf_update_verdaux.o gelf_update_verdaux.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getphdrnum.o -MD -MP -MF .deps/elf_getphdrnum.Tpo -c -o elf_getphdrnum.o elf_getphdrnum.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getshdrnum.o -MD -MP -MF .deps/elf_getshdrnum.Tpo -c -o elf_getshdrnum.o elf_getshdrnum.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getshdrstrndx.o -MD -MP -MF .deps/elf_getshdrstrndx.Tpo -c -o elf_getshdrstrndx.o elf_getshdrstrndx.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_checksum.o -MD -MP -MF .deps/gelf_checksum.Tpo -c -o gelf_checksum.o gelf_checksum.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_checksum.o -MD -MP -MF .deps/elf32_checksum.Tpo -c -o elf32_checksum.o elf32_checksum.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_checksum.o -MD -MP -MF .deps/elf64_checksum.Tpo -c -o elf64_checksum.o elf64_checksum.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT libelf_crc32.o -MD -MP -MF .deps/libelf_crc32.Tpo -c -o libelf_crc32.o libelf_crc32.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT libelf_next_prime.o -MD -MP -MF .deps/libelf_next_prime.Tpo -c -o libelf_next_prime.o libelf_next_prime.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_clone.o -MD -MP -MF .deps/elf_clone.Tpo -c -o elf_clone.o elf_clone.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getlib.o -MD -MP -MF .deps/gelf_getlib.Tpo -c -o gelf_getlib.o gelf_getlib.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_update_lib.o -MD -MP -MF .deps/gelf_update_lib.Tpo -c -o gelf_update_lib.o gelf_update_lib.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_offscn.o -MD -MP -MF .deps/elf32_offscn.Tpo -c -o elf32_offscn.o elf32_offscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_offscn.o -MD -MP -MF .deps/elf64_offscn.Tpo -c -o elf64_offscn.o elf64_offscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_offscn.o -MD -MP -MF .deps/gelf_offscn.Tpo -c -o gelf_offscn.o gelf_offscn.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_getaroff.o -MD -MP -MF .deps/elf_getaroff.Tpo -c -o elf_getaroff.o elf_getaroff.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_gnu_hash.o -MD -MP -MF .deps/elf_gnu_hash.Tpo -c -o elf_gnu_hash.o elf_gnu_hash.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_scnshndx.o -MD -MP -MF .deps/elf_scnshndx.Tpo -c -o elf_scnshndx.o elf_scnshndx.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf32_getchdr.o -MD -MP -MF .deps/elf32_getchdr.Tpo -c -o elf32_getchdr.o elf32_getchdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf64_getchdr.o -MD -MP -MF .deps/elf64_getchdr.Tpo -c -o elf64_getchdr.o elf64_getchdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT gelf_getchdr.o -MD -MP -MF .deps/gelf_getchdr.Tpo -c -o gelf_getchdr.o gelf_getchdr.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_compress.o -MD -MP -MF .deps/elf_compress.Tpo -c -o elf_compress.o elf_compress.c
+gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I..  -I. -I. -I../lib -I..  -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2 -MT elf_compress_gnu.o -MD -MP -MF .deps/elf_compress_gnu.Tpo -c -o elf_compress_gnu.o elf_compress_gnu.c
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_version.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_version.os -MD -MP \
+  -MF ".deps/elf_version.Tpo" `test -f 'elf_version.c' || echo './'`elf_version.c; \
+then cat ".deps/elf_version.Tpo" >> ".deps/elf_version.Po"; \
+     rm -f ".deps/elf_version.Tpo"; \
+else rm -f ".deps/elf_version.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_hash.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_hash.os -MD -MP \
+  -MF ".deps/elf_hash.Tpo" `test -f 'elf_hash.c' || echo './'`elf_hash.c; \
+then cat ".deps/elf_hash.Tpo" >> ".deps/elf_hash.Po"; \
+     rm -f ".deps/elf_hash.Tpo"; \
+else rm -f ".deps/elf_hash.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_error.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_error.os -MD -MP \
+  -MF ".deps/elf_error.Tpo" `test -f 'elf_error.c' || echo './'`elf_error.c; \
+then cat ".deps/elf_error.Tpo" >> ".deps/elf_error.Po"; \
+     rm -f ".deps/elf_error.Tpo"; \
+else rm -f ".deps/elf_error.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_fill.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_fill.os -MD -MP \
+  -MF ".deps/elf_fill.Tpo" `test -f 'elf_fill.c' || echo './'`elf_fill.c; \
+then cat ".deps/elf_fill.Tpo" >> ".deps/elf_fill.Po"; \
+     rm -f ".deps/elf_fill.Tpo"; \
+else rm -f ".deps/elf_fill.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_begin.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_begin.os -MD -MP \
+  -MF ".deps/elf_begin.Tpo" `test -f 'elf_begin.c' || echo './'`elf_begin.c; \
+then cat ".deps/elf_begin.Tpo" >> ".deps/elf_begin.Po"; \
+     rm -f ".deps/elf_begin.Tpo"; \
+else rm -f ".deps/elf_begin.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_next.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_next.os -MD -MP \
+  -MF ".deps/elf_next.Tpo" `test -f 'elf_next.c' || echo './'`elf_next.c; \
+then cat ".deps/elf_next.Tpo" >> ".deps/elf_next.Po"; \
+     rm -f ".deps/elf_next.Tpo"; \
+else rm -f ".deps/elf_next.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_rand.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_rand.os -MD -MP \
+  -MF ".deps/elf_rand.Tpo" `test -f 'elf_rand.c' || echo './'`elf_rand.c; \
+then cat ".deps/elf_rand.Tpo" >> ".deps/elf_rand.Po"; \
+     rm -f ".deps/elf_rand.Tpo"; \
+else rm -f ".deps/elf_rand.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_end.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_end.os -MD -MP \
+  -MF ".deps/elf_end.Tpo" `test -f 'elf_end.c' || echo './'`elf_end.c; \
+then cat ".deps/elf_end.Tpo" >> ".deps/elf_end.Po"; \
+     rm -f ".deps/elf_end.Tpo"; \
+else rm -f ".deps/elf_end.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_kind.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_kind.os -MD -MP \
+  -MF ".deps/elf_kind.Tpo" `test -f 'elf_kind.c' || echo './'`elf_kind.c; \
+then cat ".deps/elf_kind.Tpo" >> ".deps/elf_kind.Po"; \
+     rm -f ".deps/elf_kind.Tpo"; \
+else rm -f ".deps/elf_kind.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getclass.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getclass.os -MD -MP \
+  -MF ".deps/gelf_getclass.Tpo" `test -f 'gelf_getclass.c' || echo './'`gelf_getclass.c; \
+then cat ".deps/gelf_getclass.Tpo" >> ".deps/gelf_getclass.Po"; \
+     rm -f ".deps/gelf_getclass.Tpo"; \
+else rm -f ".deps/gelf_getclass.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getbase.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getbase.os -MD -MP \
+  -MF ".deps/elf_getbase.Tpo" `test -f 'elf_getbase.c' || echo './'`elf_getbase.c; \
+then cat ".deps/elf_getbase.Tpo" >> ".deps/elf_getbase.Po"; \
+     rm -f ".deps/elf_getbase.Tpo"; \
+else rm -f ".deps/elf_getbase.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getident.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getident.os -MD -MP \
+  -MF ".deps/elf_getident.Tpo" `test -f 'elf_getident.c' || echo './'`elf_getident.c; \
+then cat ".deps/elf_getident.Tpo" >> ".deps/elf_getident.Po"; \
+     rm -f ".deps/elf_getident.Tpo"; \
+else rm -f ".deps/elf_getident.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_fsize.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_fsize.os -MD -MP \
+  -MF ".deps/elf32_fsize.Tpo" `test -f 'elf32_fsize.c' || echo './'`elf32_fsize.c; \
+then cat ".deps/elf32_fsize.Tpo" >> ".deps/elf32_fsize.Po"; \
+     rm -f ".deps/elf32_fsize.Tpo"; \
+else rm -f ".deps/elf32_fsize.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_fsize.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_fsize.os -MD -MP \
+  -MF ".deps/elf64_fsize.Tpo" `test -f 'elf64_fsize.c' || echo './'`elf64_fsize.c; \
+then cat ".deps/elf64_fsize.Tpo" >> ".deps/elf64_fsize.Po"; \
+     rm -f ".deps/elf64_fsize.Tpo"; \
+else rm -f ".deps/elf64_fsize.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_fsize.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_fsize.os -MD -MP \
+  -MF ".deps/gelf_fsize.Tpo" `test -f 'gelf_fsize.c' || echo './'`gelf_fsize.c; \
+then cat ".deps/gelf_fsize.Tpo" >> ".deps/gelf_fsize.Po"; \
+     rm -f ".deps/gelf_fsize.Tpo"; \
+else rm -f ".deps/gelf_fsize.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_xlatetof.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_xlatetof.os -MD -MP \
+  -MF ".deps/elf32_xlatetof.Tpo" `test -f 'elf32_xlatetof.c' || echo './'`elf32_xlatetof.c; \
+then cat ".deps/elf32_xlatetof.Tpo" >> ".deps/elf32_xlatetof.Po"; \
+     rm -f ".deps/elf32_xlatetof.Tpo"; \
+else rm -f ".deps/elf32_xlatetof.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_xlatetom.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_xlatetom.os -MD -MP \
+  -MF ".deps/elf32_xlatetom.Tpo" `test -f 'elf32_xlatetom.c' || echo './'`elf32_xlatetom.c; \
+then cat ".deps/elf32_xlatetom.Tpo" >> ".deps/elf32_xlatetom.Po"; \
+     rm -f ".deps/elf32_xlatetom.Tpo"; \
+else rm -f ".deps/elf32_xlatetom.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_xlatetof.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_xlatetof.os -MD -MP \
+  -MF ".deps/elf64_xlatetof.Tpo" `test -f 'elf64_xlatetof.c' || echo './'`elf64_xlatetof.c; \
+then cat ".deps/elf64_xlatetof.Tpo" >> ".deps/elf64_xlatetof.Po"; \
+     rm -f ".deps/elf64_xlatetof.Tpo"; \
+else rm -f ".deps/elf64_xlatetof.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_xlatetom.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_xlatetom.os -MD -MP \
+  -MF ".deps/elf64_xlatetom.Tpo" `test -f 'elf64_xlatetom.c' || echo './'`elf64_xlatetom.c; \
+then cat ".deps/elf64_xlatetom.Tpo" >> ".deps/elf64_xlatetom.Po"; \
+     rm -f ".deps/elf64_xlatetom.Tpo"; \
+else rm -f ".deps/elf64_xlatetom.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_getehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_getehdr.os -MD -MP \
+  -MF ".deps/elf32_getehdr.Tpo" `test -f 'elf32_getehdr.c' || echo './'`elf32_getehdr.c; \
+then cat ".deps/elf32_getehdr.Tpo" >> ".deps/elf32_getehdr.Po"; \
+     rm -f ".deps/elf32_getehdr.Tpo"; \
+else rm -f ".deps/elf32_getehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_getehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_getehdr.os -MD -MP \
+  -MF ".deps/elf64_getehdr.Tpo" `test -f 'elf64_getehdr.c' || echo './'`elf64_getehdr.c; \
+then cat ".deps/elf64_getehdr.Tpo" >> ".deps/elf64_getehdr.Po"; \
+     rm -f ".deps/elf64_getehdr.Tpo"; \
+else rm -f ".deps/elf64_getehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getehdr.os -MD -MP \
+  -MF ".deps/gelf_getehdr.Tpo" `test -f 'gelf_getehdr.c' || echo './'`gelf_getehdr.c; \
+then cat ".deps/gelf_getehdr.Tpo" >> ".deps/gelf_getehdr.Po"; \
+     rm -f ".deps/gelf_getehdr.Tpo"; \
+else rm -f ".deps/gelf_getehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_newehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_newehdr.os -MD -MP \
+  -MF ".deps/elf32_newehdr.Tpo" `test -f 'elf32_newehdr.c' || echo './'`elf32_newehdr.c; \
+then cat ".deps/elf32_newehdr.Tpo" >> ".deps/elf32_newehdr.Po"; \
+     rm -f ".deps/elf32_newehdr.Tpo"; \
+else rm -f ".deps/elf32_newehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_newehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_newehdr.os -MD -MP \
+  -MF ".deps/elf64_newehdr.Tpo" `test -f 'elf64_newehdr.c' || echo './'`elf64_newehdr.c; \
+then cat ".deps/elf64_newehdr.Tpo" >> ".deps/elf64_newehdr.Po"; \
+     rm -f ".deps/elf64_newehdr.Tpo"; \
+else rm -f ".deps/elf64_newehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_newehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_newehdr.os -MD -MP \
+  -MF ".deps/gelf_newehdr.Tpo" `test -f 'gelf_newehdr.c' || echo './'`gelf_newehdr.c; \
+then cat ".deps/gelf_newehdr.Tpo" >> ".deps/gelf_newehdr.Po"; \
+     rm -f ".deps/gelf_newehdr.Tpo"; \
+else rm -f ".deps/gelf_newehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_ehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_ehdr.os -MD -MP \
+  -MF ".deps/gelf_update_ehdr.Tpo" `test -f 'gelf_update_ehdr.c' || echo './'`gelf_update_ehdr.c; \
+then cat ".deps/gelf_update_ehdr.Tpo" >> ".deps/gelf_update_ehdr.Po"; \
+     rm -f ".deps/gelf_update_ehdr.Tpo"; \
+else rm -f ".deps/gelf_update_ehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_getphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_getphdr.os -MD -MP \
+  -MF ".deps/elf32_getphdr.Tpo" `test -f 'elf32_getphdr.c' || echo './'`elf32_getphdr.c; \
+then cat ".deps/elf32_getphdr.Tpo" >> ".deps/elf32_getphdr.Po"; \
+     rm -f ".deps/elf32_getphdr.Tpo"; \
+else rm -f ".deps/elf32_getphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_getphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_getphdr.os -MD -MP \
+  -MF ".deps/elf64_getphdr.Tpo" `test -f 'elf64_getphdr.c' || echo './'`elf64_getphdr.c; \
+then cat ".deps/elf64_getphdr.Tpo" >> ".deps/elf64_getphdr.Po"; \
+     rm -f ".deps/elf64_getphdr.Tpo"; \
+else rm -f ".deps/elf64_getphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getphdr.os -MD -MP \
+  -MF ".deps/gelf_getphdr.Tpo" `test -f 'gelf_getphdr.c' || echo './'`gelf_getphdr.c; \
+then cat ".deps/gelf_getphdr.Tpo" >> ".deps/gelf_getphdr.Po"; \
+     rm -f ".deps/gelf_getphdr.Tpo"; \
+else rm -f ".deps/gelf_getphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_newphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_newphdr.os -MD -MP \
+  -MF ".deps/elf32_newphdr.Tpo" `test -f 'elf32_newphdr.c' || echo './'`elf32_newphdr.c; \
+then cat ".deps/elf32_newphdr.Tpo" >> ".deps/elf32_newphdr.Po"; \
+     rm -f ".deps/elf32_newphdr.Tpo"; \
+else rm -f ".deps/elf32_newphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_newphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_newphdr.os -MD -MP \
+  -MF ".deps/elf64_newphdr.Tpo" `test -f 'elf64_newphdr.c' || echo './'`elf64_newphdr.c; \
+then cat ".deps/elf64_newphdr.Tpo" >> ".deps/elf64_newphdr.Po"; \
+     rm -f ".deps/elf64_newphdr.Tpo"; \
+else rm -f ".deps/elf64_newphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_newphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_newphdr.os -MD -MP \
+  -MF ".deps/gelf_newphdr.Tpo" `test -f 'gelf_newphdr.c' || echo './'`gelf_newphdr.c; \
+then cat ".deps/gelf_newphdr.Tpo" >> ".deps/gelf_newphdr.Po"; \
+     rm -f ".deps/gelf_newphdr.Tpo"; \
+else rm -f ".deps/gelf_newphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_phdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_phdr.os -MD -MP \
+  -MF ".deps/gelf_update_phdr.Tpo" `test -f 'gelf_update_phdr.c' || echo './'`gelf_update_phdr.c; \
+then cat ".deps/gelf_update_phdr.Tpo" >> ".deps/gelf_update_phdr.Po"; \
+     rm -f ".deps/gelf_update_phdr.Tpo"; \
+else rm -f ".deps/gelf_update_phdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getarhdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getarhdr.os -MD -MP \
+  -MF ".deps/elf_getarhdr.Tpo" `test -f 'elf_getarhdr.c' || echo './'`elf_getarhdr.c; \
+then cat ".deps/elf_getarhdr.Tpo" >> ".deps/elf_getarhdr.Po"; \
+     rm -f ".deps/elf_getarhdr.Tpo"; \
+else rm -f ".deps/elf_getarhdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getarsym.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getarsym.os -MD -MP \
+  -MF ".deps/elf_getarsym.Tpo" `test -f 'elf_getarsym.c' || echo './'`elf_getarsym.c; \
+then cat ".deps/elf_getarsym.Tpo" >> ".deps/elf_getarsym.Po"; \
+     rm -f ".deps/elf_getarsym.Tpo"; \
+else rm -f ".deps/elf_getarsym.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_rawfile.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_rawfile.os -MD -MP \
+  -MF ".deps/elf_rawfile.Tpo" `test -f 'elf_rawfile.c' || echo './'`elf_rawfile.c; \
+then cat ".deps/elf_rawfile.Tpo" >> ".deps/elf_rawfile.Po"; \
+     rm -f ".deps/elf_rawfile.Tpo"; \
+else rm -f ".deps/elf_rawfile.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_readall.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_readall.os -MD -MP \
+  -MF ".deps/elf_readall.Tpo" `test -f 'elf_readall.c' || echo './'`elf_readall.c; \
+then cat ".deps/elf_readall.Tpo" >> ".deps/elf_readall.Po"; \
+     rm -f ".deps/elf_readall.Tpo"; \
+else rm -f ".deps/elf_readall.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_cntl.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_cntl.os -MD -MP \
+  -MF ".deps/elf_cntl.Tpo" `test -f 'elf_cntl.c' || echo './'`elf_cntl.c; \
+then cat ".deps/elf_cntl.Tpo" >> ".deps/elf_cntl.Po"; \
+     rm -f ".deps/elf_cntl.Tpo"; \
+else rm -f ".deps/elf_cntl.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getscn.os -MD -MP \
+  -MF ".deps/elf_getscn.Tpo" `test -f 'elf_getscn.c' || echo './'`elf_getscn.c; \
+then cat ".deps/elf_getscn.Tpo" >> ".deps/elf_getscn.Po"; \
+     rm -f ".deps/elf_getscn.Tpo"; \
+else rm -f ".deps/elf_getscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_nextscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_nextscn.os -MD -MP \
+  -MF ".deps/elf_nextscn.Tpo" `test -f 'elf_nextscn.c' || echo './'`elf_nextscn.c; \
+then cat ".deps/elf_nextscn.Tpo" >> ".deps/elf_nextscn.Po"; \
+     rm -f ".deps/elf_nextscn.Tpo"; \
+else rm -f ".deps/elf_nextscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_ndxscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_ndxscn.os -MD -MP \
+  -MF ".deps/elf_ndxscn.Tpo" `test -f 'elf_ndxscn.c' || echo './'`elf_ndxscn.c; \
+then cat ".deps/elf_ndxscn.Tpo" >> ".deps/elf_ndxscn.Po"; \
+     rm -f ".deps/elf_ndxscn.Tpo"; \
+else rm -f ".deps/elf_ndxscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_newscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_newscn.os -MD -MP \
+  -MF ".deps/elf_newscn.Tpo" `test -f 'elf_newscn.c' || echo './'`elf_newscn.c; \
+then cat ".deps/elf_newscn.Tpo" >> ".deps/elf_newscn.Po"; \
+     rm -f ".deps/elf_newscn.Tpo"; \
+else rm -f ".deps/elf_newscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_getshdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_getshdr.os -MD -MP \
+  -MF ".deps/elf32_getshdr.Tpo" `test -f 'elf32_getshdr.c' || echo './'`elf32_getshdr.c; \
+then cat ".deps/elf32_getshdr.Tpo" >> ".deps/elf32_getshdr.Po"; \
+     rm -f ".deps/elf32_getshdr.Tpo"; \
+else rm -f ".deps/elf32_getshdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_getshdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_getshdr.os -MD -MP \
+  -MF ".deps/elf64_getshdr.Tpo" `test -f 'elf64_getshdr.c' || echo './'`elf64_getshdr.c; \
+then cat ".deps/elf64_getshdr.Tpo" >> ".deps/elf64_getshdr.Po"; \
+     rm -f ".deps/elf64_getshdr.Tpo"; \
+else rm -f ".deps/elf64_getshdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getshdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getshdr.os -MD -MP \
+  -MF ".deps/gelf_getshdr.Tpo" `test -f 'gelf_getshdr.c' || echo './'`gelf_getshdr.c; \
+then cat ".deps/gelf_getshdr.Tpo" >> ".deps/gelf_getshdr.Po"; \
+     rm -f ".deps/gelf_getshdr.Tpo"; \
+else rm -f ".deps/gelf_getshdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_shdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_shdr.os -MD -MP \
+  -MF ".deps/gelf_update_shdr.Tpo" `test -f 'gelf_update_shdr.c' || echo './'`gelf_update_shdr.c; \
+then cat ".deps/gelf_update_shdr.Tpo" >> ".deps/gelf_update_shdr.Po"; \
+     rm -f ".deps/gelf_update_shdr.Tpo"; \
+else rm -f ".deps/gelf_update_shdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_strptr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_strptr.os -MD -MP \
+  -MF ".deps/elf_strptr.Tpo" `test -f 'elf_strptr.c' || echo './'`elf_strptr.c; \
+then cat ".deps/elf_strptr.Tpo" >> ".deps/elf_strptr.Po"; \
+     rm -f ".deps/elf_strptr.Tpo"; \
+else rm -f ".deps/elf_strptr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_rawdata.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_rawdata.os -MD -MP \
+  -MF ".deps/elf_rawdata.Tpo" `test -f 'elf_rawdata.c' || echo './'`elf_rawdata.c; \
+then cat ".deps/elf_rawdata.Tpo" >> ".deps/elf_rawdata.Po"; \
+     rm -f ".deps/elf_rawdata.Tpo"; \
+else rm -f ".deps/elf_rawdata.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getdata.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getdata.os -MD -MP \
+  -MF ".deps/elf_getdata.Tpo" `test -f 'elf_getdata.c' || echo './'`elf_getdata.c; \
+then cat ".deps/elf_getdata.Tpo" >> ".deps/elf_getdata.Po"; \
+     rm -f ".deps/elf_getdata.Tpo"; \
+else rm -f ".deps/elf_getdata.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_newdata.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_newdata.os -MD -MP \
+  -MF ".deps/elf_newdata.Tpo" `test -f 'elf_newdata.c' || echo './'`elf_newdata.c; \
+then cat ".deps/elf_newdata.Tpo" >> ".deps/elf_newdata.Po"; \
+     rm -f ".deps/elf_newdata.Tpo"; \
+else rm -f ".deps/elf_newdata.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getdata_rawchunk.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getdata_rawchunk.os -MD -MP \
+  -MF ".deps/elf_getdata_rawchunk.Tpo" `test -f 'elf_getdata_rawchunk.c' || echo './'`elf_getdata_rawchunk.c; \
+then cat ".deps/elf_getdata_rawchunk.Tpo" >> ".deps/elf_getdata_rawchunk.Po"; \
+     rm -f ".deps/elf_getdata_rawchunk.Tpo"; \
+else rm -f ".deps/elf_getdata_rawchunk.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_flagelf.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_flagelf.os -MD -MP \
+  -MF ".deps/elf_flagelf.Tpo" `test -f 'elf_flagelf.c' || echo './'`elf_flagelf.c; \
+then cat ".deps/elf_flagelf.Tpo" >> ".deps/elf_flagelf.Po"; \
+     rm -f ".deps/elf_flagelf.Tpo"; \
+else rm -f ".deps/elf_flagelf.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_flagehdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_flagehdr.os -MD -MP \
+  -MF ".deps/elf_flagehdr.Tpo" `test -f 'elf_flagehdr.c' || echo './'`elf_flagehdr.c; \
+then cat ".deps/elf_flagehdr.Tpo" >> ".deps/elf_flagehdr.Po"; \
+     rm -f ".deps/elf_flagehdr.Tpo"; \
+else rm -f ".deps/elf_flagehdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_flagphdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_flagphdr.os -MD -MP \
+  -MF ".deps/elf_flagphdr.Tpo" `test -f 'elf_flagphdr.c' || echo './'`elf_flagphdr.c; \
+then cat ".deps/elf_flagphdr.Tpo" >> ".deps/elf_flagphdr.Po"; \
+     rm -f ".deps/elf_flagphdr.Tpo"; \
+else rm -f ".deps/elf_flagphdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_flagscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_flagscn.os -MD -MP \
+  -MF ".deps/elf_flagscn.Tpo" `test -f 'elf_flagscn.c' || echo './'`elf_flagscn.c; \
+then cat ".deps/elf_flagscn.Tpo" >> ".deps/elf_flagscn.Po"; \
+     rm -f ".deps/elf_flagscn.Tpo"; \
+else rm -f ".deps/elf_flagscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_flagshdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_flagshdr.os -MD -MP \
+  -MF ".deps/elf_flagshdr.Tpo" `test -f 'elf_flagshdr.c' || echo './'`elf_flagshdr.c; \
+then cat ".deps/elf_flagshdr.Tpo" >> ".deps/elf_flagshdr.Po"; \
+     rm -f ".deps/elf_flagshdr.Tpo"; \
+else rm -f ".deps/elf_flagshdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_flagdata.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_flagdata.os -MD -MP \
+  -MF ".deps/elf_flagdata.Tpo" `test -f 'elf_flagdata.c' || echo './'`elf_flagdata.c; \
+then cat ".deps/elf_flagdata.Tpo" >> ".deps/elf_flagdata.Po"; \
+     rm -f ".deps/elf_flagdata.Tpo"; \
+else rm -f ".deps/elf_flagdata.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_memory.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_memory.os -MD -MP \
+  -MF ".deps/elf_memory.Tpo" `test -f 'elf_memory.c' || echo './'`elf_memory.c; \
+then cat ".deps/elf_memory.Tpo" >> ".deps/elf_memory.Po"; \
+     rm -f ".deps/elf_memory.Tpo"; \
+else rm -f ".deps/elf_memory.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_update.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_update.os -MD -MP \
+  -MF ".deps/elf_update.Tpo" `test -f 'elf_update.c' || echo './'`elf_update.c; \
+then cat ".deps/elf_update.Tpo" >> ".deps/elf_update.Po"; \
+     rm -f ".deps/elf_update.Tpo"; \
+else rm -f ".deps/elf_update.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_updatenull.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_updatenull.os -MD -MP \
+  -MF ".deps/elf32_updatenull.Tpo" `test -f 'elf32_updatenull.c' || echo './'`elf32_updatenull.c; \
+then cat ".deps/elf32_updatenull.Tpo" >> ".deps/elf32_updatenull.Po"; \
+     rm -f ".deps/elf32_updatenull.Tpo"; \
+else rm -f ".deps/elf32_updatenull.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_updatenull.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_updatenull.os -MD -MP \
+  -MF ".deps/elf64_updatenull.Tpo" `test -f 'elf64_updatenull.c' || echo './'`elf64_updatenull.c; \
+then cat ".deps/elf64_updatenull.Tpo" >> ".deps/elf64_updatenull.Po"; \
+     rm -f ".deps/elf64_updatenull.Tpo"; \
+else rm -f ".deps/elf64_updatenull.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_updatefile.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_updatefile.os -MD -MP \
+  -MF ".deps/elf32_updatefile.Tpo" `test -f 'elf32_updatefile.c' || echo './'`elf32_updatefile.c; \
+then cat ".deps/elf32_updatefile.Tpo" >> ".deps/elf32_updatefile.Po"; \
+     rm -f ".deps/elf32_updatefile.Tpo"; \
+else rm -f ".deps/elf32_updatefile.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_updatefile.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_updatefile.os -MD -MP \
+  -MF ".deps/elf64_updatefile.Tpo" `test -f 'elf64_updatefile.c' || echo './'`elf64_updatefile.c; \
+then cat ".deps/elf64_updatefile.Tpo" >> ".deps/elf64_updatefile.Po"; \
+     rm -f ".deps/elf64_updatefile.Tpo"; \
+else rm -f ".deps/elf64_updatefile.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getsym.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getsym.os -MD -MP \
+  -MF ".deps/gelf_getsym.Tpo" `test -f 'gelf_getsym.c' || echo './'`gelf_getsym.c; \
+then cat ".deps/gelf_getsym.Tpo" >> ".deps/gelf_getsym.Po"; \
+     rm -f ".deps/gelf_getsym.Tpo"; \
+else rm -f ".deps/gelf_getsym.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_sym.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_sym.os -MD -MP \
+  -MF ".deps/gelf_update_sym.Tpo" `test -f 'gelf_update_sym.c' || echo './'`gelf_update_sym.c; \
+then cat ".deps/gelf_update_sym.Tpo" >> ".deps/gelf_update_sym.Po"; \
+     rm -f ".deps/gelf_update_sym.Tpo"; \
+else rm -f ".deps/gelf_update_sym.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getversym.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getversym.os -MD -MP \
+  -MF ".deps/gelf_getversym.Tpo" `test -f 'gelf_getversym.c' || echo './'`gelf_getversym.c; \
+then cat ".deps/gelf_getversym.Tpo" >> ".deps/gelf_getversym.Po"; \
+     rm -f ".deps/gelf_getversym.Tpo"; \
+else rm -f ".deps/gelf_getversym.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getverneed.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getverneed.os -MD -MP \
+  -MF ".deps/gelf_getverneed.Tpo" `test -f 'gelf_getverneed.c' || echo './'`gelf_getverneed.c; \
+then cat ".deps/gelf_getverneed.Tpo" >> ".deps/gelf_getverneed.Po"; \
+     rm -f ".deps/gelf_getverneed.Tpo"; \
+else rm -f ".deps/gelf_getverneed.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getvernaux.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getvernaux.os -MD -MP \
+  -MF ".deps/gelf_getvernaux.Tpo" `test -f 'gelf_getvernaux.c' || echo './'`gelf_getvernaux.c; \
+then cat ".deps/gelf_getvernaux.Tpo" >> ".deps/gelf_getvernaux.Po"; \
+     rm -f ".deps/gelf_getvernaux.Tpo"; \
+else rm -f ".deps/gelf_getvernaux.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getverdef.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getverdef.os -MD -MP \
+  -MF ".deps/gelf_getverdef.Tpo" `test -f 'gelf_getverdef.c' || echo './'`gelf_getverdef.c; \
+then cat ".deps/gelf_getverdef.Tpo" >> ".deps/gelf_getverdef.Po"; \
+     rm -f ".deps/gelf_getverdef.Tpo"; \
+else rm -f ".deps/gelf_getverdef.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getverdaux.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getverdaux.os -MD -MP \
+  -MF ".deps/gelf_getverdaux.Tpo" `test -f 'gelf_getverdaux.c' || echo './'`gelf_getverdaux.c; \
+then cat ".deps/gelf_getverdaux.Tpo" >> ".deps/gelf_getverdaux.Po"; \
+     rm -f ".deps/gelf_getverdaux.Tpo"; \
+else rm -f ".deps/gelf_getverdaux.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getrel.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getrel.os -MD -MP \
+  -MF ".deps/gelf_getrel.Tpo" `test -f 'gelf_getrel.c' || echo './'`gelf_getrel.c; \
+then cat ".deps/gelf_getrel.Tpo" >> ".deps/gelf_getrel.Po"; \
+     rm -f ".deps/gelf_getrel.Tpo"; \
+else rm -f ".deps/gelf_getrel.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getrela.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getrela.os -MD -MP \
+  -MF ".deps/gelf_getrela.Tpo" `test -f 'gelf_getrela.c' || echo './'`gelf_getrela.c; \
+then cat ".deps/gelf_getrela.Tpo" >> ".deps/gelf_getrela.Po"; \
+     rm -f ".deps/gelf_getrela.Tpo"; \
+else rm -f ".deps/gelf_getrela.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_rel.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_rel.os -MD -MP \
+  -MF ".deps/gelf_update_rel.Tpo" `test -f 'gelf_update_rel.c' || echo './'`gelf_update_rel.c; \
+then cat ".deps/gelf_update_rel.Tpo" >> ".deps/gelf_update_rel.Po"; \
+     rm -f ".deps/gelf_update_rel.Tpo"; \
+else rm -f ".deps/gelf_update_rel.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_rela.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_rela.os -MD -MP \
+  -MF ".deps/gelf_update_rela.Tpo" `test -f 'gelf_update_rela.c' || echo './'`gelf_update_rela.c; \
+then cat ".deps/gelf_update_rela.Tpo" >> ".deps/gelf_update_rela.Po"; \
+     rm -f ".deps/gelf_update_rela.Tpo"; \
+else rm -f ".deps/gelf_update_rela.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getdyn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getdyn.os -MD -MP \
+  -MF ".deps/gelf_getdyn.Tpo" `test -f 'gelf_getdyn.c' || echo './'`gelf_getdyn.c; \
+then cat ".deps/gelf_getdyn.Tpo" >> ".deps/gelf_getdyn.Po"; \
+     rm -f ".deps/gelf_getdyn.Tpo"; \
+else rm -f ".deps/gelf_getdyn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_dyn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_dyn.os -MD -MP \
+  -MF ".deps/gelf_update_dyn.Tpo" `test -f 'gelf_update_dyn.c' || echo './'`gelf_update_dyn.c; \
+then cat ".deps/gelf_update_dyn.Tpo" >> ".deps/gelf_update_dyn.Po"; \
+     rm -f ".deps/gelf_update_dyn.Tpo"; \
+else rm -f ".deps/gelf_update_dyn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getmove.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getmove.os -MD -MP \
+  -MF ".deps/gelf_getmove.Tpo" `test -f 'gelf_getmove.c' || echo './'`gelf_getmove.c; \
+then cat ".deps/gelf_getmove.Tpo" >> ".deps/gelf_getmove.Po"; \
+     rm -f ".deps/gelf_getmove.Tpo"; \
+else rm -f ".deps/gelf_getmove.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_move.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_move.os -MD -MP \
+  -MF ".deps/gelf_update_move.Tpo" `test -f 'gelf_update_move.c' || echo './'`gelf_update_move.c; \
+then cat ".deps/gelf_update_move.Tpo" >> ".deps/gelf_update_move.Po"; \
+     rm -f ".deps/gelf_update_move.Tpo"; \
+else rm -f ".deps/gelf_update_move.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getsyminfo.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getsyminfo.os -MD -MP \
+  -MF ".deps/gelf_getsyminfo.Tpo" `test -f 'gelf_getsyminfo.c' || echo './'`gelf_getsyminfo.c; \
+then cat ".deps/gelf_getsyminfo.Tpo" >> ".deps/gelf_getsyminfo.Po"; \
+     rm -f ".deps/gelf_getsyminfo.Tpo"; \
+else rm -f ".deps/gelf_getsyminfo.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_syminfo.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_syminfo.os -MD -MP \
+  -MF ".deps/gelf_update_syminfo.Tpo" `test -f 'gelf_update_syminfo.c' || echo './'`gelf_update_syminfo.c; \
+then cat ".deps/gelf_update_syminfo.Tpo" >> ".deps/gelf_update_syminfo.Po"; \
+     rm -f ".deps/gelf_update_syminfo.Tpo"; \
+else rm -f ".deps/gelf_update_syminfo.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getauxv.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getauxv.os -MD -MP \
+  -MF ".deps/gelf_getauxv.Tpo" `test -f 'gelf_getauxv.c' || echo './'`gelf_getauxv.c; \
+then cat ".deps/gelf_getauxv.Tpo" >> ".deps/gelf_getauxv.Po"; \
+     rm -f ".deps/gelf_getauxv.Tpo"; \
+else rm -f ".deps/gelf_getauxv.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_auxv.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_auxv.os -MD -MP \
+  -MF ".deps/gelf_update_auxv.Tpo" `test -f 'gelf_update_auxv.c' || echo './'`gelf_update_auxv.c; \
+then cat ".deps/gelf_update_auxv.Tpo" >> ".deps/gelf_update_auxv.Po"; \
+     rm -f ".deps/gelf_update_auxv.Tpo"; \
+else rm -f ".deps/gelf_update_auxv.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getnote.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getnote.os -MD -MP \
+  -MF ".deps/gelf_getnote.Tpo" `test -f 'gelf_getnote.c' || echo './'`gelf_getnote.c; \
+then cat ".deps/gelf_getnote.Tpo" >> ".deps/gelf_getnote.Po"; \
+     rm -f ".deps/gelf_getnote.Tpo"; \
+else rm -f ".deps/gelf_getnote.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_xlatetof.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_xlatetof.os -MD -MP \
+  -MF ".deps/gelf_xlatetof.Tpo" `test -f 'gelf_xlatetof.c' || echo './'`gelf_xlatetof.c; \
+then cat ".deps/gelf_xlatetof.Tpo" >> ".deps/gelf_xlatetof.Po"; \
+     rm -f ".deps/gelf_xlatetof.Tpo"; \
+else rm -f ".deps/gelf_xlatetof.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_xlatetom.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_xlatetom.os -MD -MP \
+  -MF ".deps/gelf_xlatetom.Tpo" `test -f 'gelf_xlatetom.c' || echo './'`gelf_xlatetom.c; \
+then cat ".deps/gelf_xlatetom.Tpo" >> ".deps/gelf_xlatetom.Po"; \
+     rm -f ".deps/gelf_xlatetom.Tpo"; \
+else rm -f ".deps/gelf_xlatetom.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o nlist.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT nlist.os -MD -MP \
+  -MF ".deps/nlist.Tpo" `test -f 'nlist.c' || echo './'`nlist.c; \
+then cat ".deps/nlist.Tpo" >> ".deps/nlist.Po"; \
+     rm -f ".deps/nlist.Tpo"; \
+else rm -f ".deps/nlist.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getsymshndx.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getsymshndx.os -MD -MP \
+  -MF ".deps/gelf_getsymshndx.Tpo" `test -f 'gelf_getsymshndx.c' || echo './'`gelf_getsymshndx.c; \
+then cat ".deps/gelf_getsymshndx.Tpo" >> ".deps/gelf_getsymshndx.Po"; \
+     rm -f ".deps/gelf_getsymshndx.Tpo"; \
+else rm -f ".deps/gelf_getsymshndx.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_symshndx.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_symshndx.os -MD -MP \
+  -MF ".deps/gelf_update_symshndx.Tpo" `test -f 'gelf_update_symshndx.c' || echo './'`gelf_update_symshndx.c; \
+then cat ".deps/gelf_update_symshndx.Tpo" >> ".deps/gelf_update_symshndx.Po"; \
+     rm -f ".deps/gelf_update_symshndx.Tpo"; \
+else rm -f ".deps/gelf_update_symshndx.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_versym.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_versym.os -MD -MP \
+  -MF ".deps/gelf_update_versym.Tpo" `test -f 'gelf_update_versym.c' || echo './'`gelf_update_versym.c; \
+then cat ".deps/gelf_update_versym.Tpo" >> ".deps/gelf_update_versym.Po"; \
+     rm -f ".deps/gelf_update_versym.Tpo"; \
+else rm -f ".deps/gelf_update_versym.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_verneed.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_verneed.os -MD -MP \
+  -MF ".deps/gelf_update_verneed.Tpo" `test -f 'gelf_update_verneed.c' || echo './'`gelf_update_verneed.c; \
+then cat ".deps/gelf_update_verneed.Tpo" >> ".deps/gelf_update_verneed.Po"; \
+     rm -f ".deps/gelf_update_verneed.Tpo"; \
+else rm -f ".deps/gelf_update_verneed.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_vernaux.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_vernaux.os -MD -MP \
+  -MF ".deps/gelf_update_vernaux.Tpo" `test -f 'gelf_update_vernaux.c' || echo './'`gelf_update_vernaux.c; \
+then cat ".deps/gelf_update_vernaux.Tpo" >> ".deps/gelf_update_vernaux.Po"; \
+     rm -f ".deps/gelf_update_vernaux.Tpo"; \
+else rm -f ".deps/gelf_update_vernaux.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_verdef.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_verdef.os -MD -MP \
+  -MF ".deps/gelf_update_verdef.Tpo" `test -f 'gelf_update_verdef.c' || echo './'`gelf_update_verdef.c; \
+then cat ".deps/gelf_update_verdef.Tpo" >> ".deps/gelf_update_verdef.Po"; \
+     rm -f ".deps/gelf_update_verdef.Tpo"; \
+else rm -f ".deps/gelf_update_verdef.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_verdaux.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_verdaux.os -MD -MP \
+  -MF ".deps/gelf_update_verdaux.Tpo" `test -f 'gelf_update_verdaux.c' || echo './'`gelf_update_verdaux.c; \
+then cat ".deps/gelf_update_verdaux.Tpo" >> ".deps/gelf_update_verdaux.Po"; \
+     rm -f ".deps/gelf_update_verdaux.Tpo"; \
+else rm -f ".deps/gelf_update_verdaux.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getphdrnum.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getphdrnum.os -MD -MP \
+  -MF ".deps/elf_getphdrnum.Tpo" `test -f 'elf_getphdrnum.c' || echo './'`elf_getphdrnum.c; \
+then cat ".deps/elf_getphdrnum.Tpo" >> ".deps/elf_getphdrnum.Po"; \
+     rm -f ".deps/elf_getphdrnum.Tpo"; \
+else rm -f ".deps/elf_getphdrnum.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getshdrnum.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getshdrnum.os -MD -MP \
+  -MF ".deps/elf_getshdrnum.Tpo" `test -f 'elf_getshdrnum.c' || echo './'`elf_getshdrnum.c; \
+then cat ".deps/elf_getshdrnum.Tpo" >> ".deps/elf_getshdrnum.Po"; \
+     rm -f ".deps/elf_getshdrnum.Tpo"; \
+else rm -f ".deps/elf_getshdrnum.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getshdrstrndx.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getshdrstrndx.os -MD -MP \
+  -MF ".deps/elf_getshdrstrndx.Tpo" `test -f 'elf_getshdrstrndx.c' || echo './'`elf_getshdrstrndx.c; \
+then cat ".deps/elf_getshdrstrndx.Tpo" >> ".deps/elf_getshdrstrndx.Po"; \
+     rm -f ".deps/elf_getshdrstrndx.Tpo"; \
+else rm -f ".deps/elf_getshdrstrndx.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_checksum.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_checksum.os -MD -MP \
+  -MF ".deps/gelf_checksum.Tpo" `test -f 'gelf_checksum.c' || echo './'`gelf_checksum.c; \
+then cat ".deps/gelf_checksum.Tpo" >> ".deps/gelf_checksum.Po"; \
+     rm -f ".deps/gelf_checksum.Tpo"; \
+else rm -f ".deps/gelf_checksum.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_checksum.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_checksum.os -MD -MP \
+  -MF ".deps/elf32_checksum.Tpo" `test -f 'elf32_checksum.c' || echo './'`elf32_checksum.c; \
+then cat ".deps/elf32_checksum.Tpo" >> ".deps/elf32_checksum.Po"; \
+     rm -f ".deps/elf32_checksum.Tpo"; \
+else rm -f ".deps/elf32_checksum.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_checksum.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_checksum.os -MD -MP \
+  -MF ".deps/elf64_checksum.Tpo" `test -f 'elf64_checksum.c' || echo './'`elf64_checksum.c; \
+then cat ".deps/elf64_checksum.Tpo" >> ".deps/elf64_checksum.Po"; \
+     rm -f ".deps/elf64_checksum.Tpo"; \
+else rm -f ".deps/elf64_checksum.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o libelf_crc32.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT libelf_crc32.os -MD -MP \
+  -MF ".deps/libelf_crc32.Tpo" `test -f 'libelf_crc32.c' || echo './'`libelf_crc32.c; \
+then cat ".deps/libelf_crc32.Tpo" >> ".deps/libelf_crc32.Po"; \
+     rm -f ".deps/libelf_crc32.Tpo"; \
+else rm -f ".deps/libelf_crc32.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o libelf_next_prime.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT libelf_next_prime.os -MD -MP \
+  -MF ".deps/libelf_next_prime.Tpo" `test -f 'libelf_next_prime.c' || echo './'`libelf_next_prime.c; \
+then cat ".deps/libelf_next_prime.Tpo" >> ".deps/libelf_next_prime.Po"; \
+     rm -f ".deps/libelf_next_prime.Tpo"; \
+else rm -f ".deps/libelf_next_prime.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_clone.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_clone.os -MD -MP \
+  -MF ".deps/elf_clone.Tpo" `test -f 'elf_clone.c' || echo './'`elf_clone.c; \
+then cat ".deps/elf_clone.Tpo" >> ".deps/elf_clone.Po"; \
+     rm -f ".deps/elf_clone.Tpo"; \
+else rm -f ".deps/elf_clone.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getlib.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getlib.os -MD -MP \
+  -MF ".deps/gelf_getlib.Tpo" `test -f 'gelf_getlib.c' || echo './'`gelf_getlib.c; \
+then cat ".deps/gelf_getlib.Tpo" >> ".deps/gelf_getlib.Po"; \
+     rm -f ".deps/gelf_getlib.Tpo"; \
+else rm -f ".deps/gelf_getlib.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_update_lib.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_update_lib.os -MD -MP \
+  -MF ".deps/gelf_update_lib.Tpo" `test -f 'gelf_update_lib.c' || echo './'`gelf_update_lib.c; \
+then cat ".deps/gelf_update_lib.Tpo" >> ".deps/gelf_update_lib.Po"; \
+     rm -f ".deps/gelf_update_lib.Tpo"; \
+else rm -f ".deps/gelf_update_lib.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_offscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_offscn.os -MD -MP \
+  -MF ".deps/elf32_offscn.Tpo" `test -f 'elf32_offscn.c' || echo './'`elf32_offscn.c; \
+then cat ".deps/elf32_offscn.Tpo" >> ".deps/elf32_offscn.Po"; \
+     rm -f ".deps/elf32_offscn.Tpo"; \
+else rm -f ".deps/elf32_offscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_offscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_offscn.os -MD -MP \
+  -MF ".deps/elf64_offscn.Tpo" `test -f 'elf64_offscn.c' || echo './'`elf64_offscn.c; \
+then cat ".deps/elf64_offscn.Tpo" >> ".deps/elf64_offscn.Po"; \
+     rm -f ".deps/elf64_offscn.Tpo"; \
+else rm -f ".deps/elf64_offscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_offscn.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_offscn.os -MD -MP \
+  -MF ".deps/gelf_offscn.Tpo" `test -f 'gelf_offscn.c' || echo './'`gelf_offscn.c; \
+then cat ".deps/gelf_offscn.Tpo" >> ".deps/gelf_offscn.Po"; \
+     rm -f ".deps/gelf_offscn.Tpo"; \
+else rm -f ".deps/gelf_offscn.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_getaroff.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_getaroff.os -MD -MP \
+  -MF ".deps/elf_getaroff.Tpo" `test -f 'elf_getaroff.c' || echo './'`elf_getaroff.c; \
+then cat ".deps/elf_getaroff.Tpo" >> ".deps/elf_getaroff.Po"; \
+     rm -f ".deps/elf_getaroff.Tpo"; \
+else rm -f ".deps/elf_getaroff.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_gnu_hash.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_gnu_hash.os -MD -MP \
+  -MF ".deps/elf_gnu_hash.Tpo" `test -f 'elf_gnu_hash.c' || echo './'`elf_gnu_hash.c; \
+then cat ".deps/elf_gnu_hash.Tpo" >> ".deps/elf_gnu_hash.Po"; \
+     rm -f ".deps/elf_gnu_hash.Tpo"; \
+else rm -f ".deps/elf_gnu_hash.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_scnshndx.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_scnshndx.os -MD -MP \
+  -MF ".deps/elf_scnshndx.Tpo" `test -f 'elf_scnshndx.c' || echo './'`elf_scnshndx.c; \
+then cat ".deps/elf_scnshndx.Tpo" >> ".deps/elf_scnshndx.Po"; \
+     rm -f ".deps/elf_scnshndx.Tpo"; \
+else rm -f ".deps/elf_scnshndx.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf32_getchdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf32_getchdr.os -MD -MP \
+  -MF ".deps/elf32_getchdr.Tpo" `test -f 'elf32_getchdr.c' || echo './'`elf32_getchdr.c; \
+then cat ".deps/elf32_getchdr.Tpo" >> ".deps/elf32_getchdr.Po"; \
+     rm -f ".deps/elf32_getchdr.Tpo"; \
+else rm -f ".deps/elf32_getchdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf64_getchdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf64_getchdr.os -MD -MP \
+  -MF ".deps/elf64_getchdr.Tpo" `test -f 'elf64_getchdr.c' || echo './'`elf64_getchdr.c; \
+then cat ".deps/elf64_getchdr.Tpo" >> ".deps/elf64_getchdr.Po"; \
+     rm -f ".deps/elf64_getchdr.Tpo"; \
+else rm -f ".deps/elf64_getchdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_getchdr.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_getchdr.os -MD -MP \
+  -MF ".deps/gelf_getchdr.Tpo" `test -f 'gelf_getchdr.c' || echo './'`gelf_getchdr.c; \
+then cat ".deps/gelf_getchdr.Tpo" >> ".deps/gelf_getchdr.Po"; \
+     rm -f ".deps/gelf_getchdr.Tpo"; \
+else rm -f ".deps/gelf_getchdr.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_compress.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_compress.os -MD -MP \
+  -MF ".deps/elf_compress.Tpo" `test -f 'elf_compress.c' || echo './'`elf_compress.c; \
+then cat ".deps/elf_compress.Tpo" >> ".deps/elf_compress.Po"; \
+     rm -f ".deps/elf_compress.Tpo"; \
+else rm -f ".deps/elf_compress.Tpo"; exit 1; \
+fi
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o elf_compress_gnu.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT elf_compress_gnu.os -MD -MP \
+  -MF ".deps/elf_compress_gnu.Tpo" `test -f 'elf_compress_gnu.c' || echo './'`elf_compress_gnu.c; \
+then cat ".deps/elf_compress_gnu.Tpo" >> ".deps/elf_compress_gnu.Po"; \
+     rm -f ".deps/elf_compress_gnu.Tpo"; \
+else rm -f ".deps/elf_compress_gnu.Tpo"; exit 1; \
+fi
+ar cr libelf.a elf_version.o elf_hash.o elf_error.o elf_fill.o elf_begin.o elf_next.o elf_rand.o elf_end.o elf_kind.o gelf_getclass.o elf_getbase.o elf_getident.o elf32_fsize.o elf64_fsize.o gelf_fsize.o elf32_xlatetof.o elf32_xlatetom.o elf64_xlatetof.o elf64_xlatetom.o gelf_xlate.o elf32_getehdr.o elf64_getehdr.o gelf_getehdr.o elf32_newehdr.o elf64_newehdr.o gelf_newehdr.o gelf_update_ehdr.o elf32_getphdr.o elf64_getphdr.o gelf_getphdr.o elf32_newphdr.o elf64_newphdr.o gelf_newphdr.o gelf_update_phdr.o elf_getarhdr.o elf_getarsym.o elf_rawfile.o elf_readall.o elf_cntl.o elf_getscn.o elf_nextscn.o elf_ndxscn.o elf_newscn.o elf32_getshdr.o elf64_getshdr.o gelf_getshdr.o gelf_update_shdr.o elf_strptr.o elf_rawdata.o elf_getdata.o elf_newdata.o elf_getdata_rawchunk.o elf_flagelf.o elf_flagehdr.o elf_flagphdr.o elf_flagscn.o elf_flagshdr.o elf_flagdata.o elf_memory.o elf_update.o elf32_updatenull.o elf64_updatenull.o elf32_updatefile.o elf64_updatefile.o gelf_getsym.o gelf_update_sym.o gelf_getversym.o gelf_getverneed.o gelf_getvernaux.o gelf_getverdef.o gelf_getverdaux.o gelf_getrel.o gelf_getrela.o gelf_update_rel.o gelf_update_rela.o gelf_getdyn.o gelf_update_dyn.o gelf_getmove.o gelf_update_move.o gelf_getsyminfo.o gelf_update_syminfo.o gelf_getauxv.o gelf_update_auxv.o gelf_getnote.o gelf_xlatetof.o gelf_xlatetom.o nlist.o gelf_getsymshndx.o gelf_update_symshndx.o gelf_update_versym.o gelf_update_verneed.o gelf_update_vernaux.o gelf_update_verdef.o gelf_update_verdaux.o elf_getphdrnum.o elf_getshdrnum.o elf_getshdrstrndx.o gelf_checksum.o elf32_checksum.o elf64_checksum.o libelf_crc32.o libelf_next_prime.o elf_clone.o gelf_getlib.o gelf_update_lib.o elf32_offscn.o elf64_offscn.o gelf_offscn.o elf_getaroff.o elf_gnu_hash.o elf_scnshndx.o elf32_getchdr.o elf64_getchdr.o gelf_getchdr.o elf_compress.o elf_compress_gnu.o 
+if gcc -D_GNU_SOURCE -DHAVE_CONFIG_H -DLOCALEDIR='"/usr/local/share/locale"' -I. -I.. -I. -I. -I../lib -I.. -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144 -D_FORTIFY_SOURCE=2 -g -O2 -c -o gelf_xlate.os -fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING -MT gelf_xlate.os -MD -MP \
+  -MF ".deps/gelf_xlate.Tpo" `test -f 'gelf_xlate.c' || echo './'`gelf_xlate.c; \
+then cat ".deps/gelf_xlate.Tpo" >> ".deps/gelf_xlate.Po"; \
+     rm -f ".deps/gelf_xlate.Tpo"; \
+else rm -f ".deps/gelf_xlate.Tpo"; exit 1; \
+fi
+ar cr libelf_pic.a elf_version.os elf_hash.os elf_error.os elf_fill.os elf_begin.os elf_next.os elf_rand.os elf_end.os elf_kind.os gelf_getclass.os elf_getbase.os elf_getident.os elf32_fsize.os elf64_fsize.os gelf_fsize.os elf32_xlatetof.os elf32_xlatetom.os elf64_xlatetof.os elf64_xlatetom.os gelf_xlate.os elf32_getehdr.os elf64_getehdr.os gelf_getehdr.os elf32_newehdr.os elf64_newehdr.os gelf_newehdr.os gelf_update_ehdr.os elf32_getphdr.os elf64_getphdr.os gelf_getphdr.os elf32_newphdr.os elf64_newphdr.os gelf_newphdr.os gelf_update_phdr.os elf_getarhdr.os elf_getarsym.os elf_rawfile.os elf_readall.os elf_cntl.os elf_getscn.os elf_nextscn.os elf_ndxscn.os elf_newscn.os elf32_getshdr.os elf64_getshdr.os gelf_getshdr.os gelf_update_shdr.os elf_strptr.os elf_rawdata.os elf_getdata.os elf_newdata.os elf_getdata_rawchunk.os elf_flagelf.os elf_flagehdr.os elf_flagphdr.os elf_flagscn.os elf_flagshdr.os elf_flagdata.os elf_memory.os elf_update.os elf32_updatenull.os elf64_updatenull.os elf32_updatefile.os elf64_updatefile.os gelf_getsym.os gelf_update_sym.os gelf_getversym.os gelf_getverneed.os gelf_getvernaux.os gelf_getverdef.os gelf_getverdaux.os gelf_getrel.os gelf_getrela.os gelf_update_rel.os gelf_update_rela.os gelf_getdyn.os gelf_update_dyn.os gelf_getmove.os gelf_update_move.os gelf_getsyminfo.os gelf_update_syminfo.os gelf_getauxv.os gelf_update_auxv.os gelf_getnote.os gelf_xlatetof.os gelf_xlatetom.os nlist.os gelf_getsymshndx.os gelf_update_symshndx.os gelf_update_versym.os gelf_update_verneed.os gelf_update_vernaux.os gelf_update_verdef.os gelf_update_verdaux.os elf_getphdrnum.os elf_getshdrnum.os elf_getshdrstrndx.os gelf_checksum.os elf32_checksum.os elf64_checksum.os libelf_crc32.os libelf_next_prime.os elf_clone.os gelf_getlib.os gelf_update_lib.os elf32_offscn.os elf64_offscn.os gelf_offscn.os elf_getaroff.os elf_gnu_hash.os elf_scnshndx.os elf32_getchdr.os elf64_getchdr.os gelf_getchdr.os elf_compress.os elf_compress_gnu.os 
+gcc -std=gnu99 -Wall -Wshadow -Wformat=2 -Wold-style-definition -Wstrict-prototypes -Wtrampolines -Wlogical-op -Wduplicated-cond -Wnull-dereference -Wimplicit-fallthrough=5 -Werror -Wunused -Wextra -Wstack-usage=262144    -D_FORTIFY_SOURCE=2 -g -O2   -o libelf.so -shared -Wl,-z,defs -Wl,-z,relro -o libelf.so \
+	-Wl,--soname,libelf.so.1 \
+	-Wl,--version-script,libelf.map,--no-undefined \
+	-Wl,--whole-archive libelf_pic.a -Wl,--no-whole-archive \
+	../lib/libeu.a -lz 
+Making all in libebl
+  CC       eblsectiontypename.o
+  CC       eblsegmenttypename.o
+  CC       eblmachineflagname.o
+  CC       eblreloctypename.o
+  CC       eblsymboltypename.o
+  CC       ebldynamictagname.o
+  CC       eblclosebackend.o
+  CC       eblosabiname.o
+  CC       eblsymbolbindingname.o
+  CC       eblbackendname.o
+  CC       eblmachineflagcheck.o
+  CC       eblmachinesectionflagcheck.o
+  CC       eblreloctypecheck.o
+  CC       eblopenbackend.o
+  CC       eblsectionname.o
+  CC       eblrelocvaliduse.o
+  CC       eblrelocsimpletype.o
+  CC       ebldynamictagcheck.o
+  CC       eblcorenotetypename.o
+  CC       eblcorenote.o
+  CC       eblobjnote.o
+  CC       ebldebugscnp.o
+  CC       eblobjnotetypename.o
+  CC       eblgotpcreloccheck.o
+  CC       eblcopyrelocp.o
+  CC       eblsectionstripp.o
+  CC       eblelfclass.o
+  CC       eblelfdata.o
+  CC       eblelfmachine.o
+  CC       ebl_check_special_symbol.o
+  CC       eblbsspltp.o
+  CC       eblretval.o
+  CC       eblreginfo.o
+  CC       eblnonerelocp.o
+  CC       eblrelativerelocp.o
+  CC       eblsysvhashentrysize.o
+  CC       eblauxvinfo.o
+  CC       eblcheckobjattr.o
+  CC       ebl_check_special_section.o
+  CC       eblabicfi.o
+  CC       ebl_syscall_abi.o
+  CC       eblstother.o
+  CC       eblinitreg.o
+  CC       ebldwarftoregno.o
+  CC       eblnormalizepc.o
+  CC       eblunwind.o
+  CC       eblresolvesym.o
+  CC       eblcheckreloctargettype.o
+  CC       ebl_data_marker_symbol.o
+  AR       libebl.a
+Making all in libdwelf
+  CC       dwelf_elf_gnu_build_id.o
+  CC       dwelf_scn_gnu_compressed_size.o
+  CC       dwelf_dwarf_gnu_debugaltlink.o
+  CC       dwelf_strtab.o
+  CC       dwelf_elf_begin.o
+  CC       dwelf_elf_gnu_debuglink.o
+  CC       dwelf_dwarf_gnu_debugaltlink.os
+  CC       dwelf_elf_gnu_debuglink.os
+  CC       dwelf_scn_gnu_compressed_size.os
+  CC       dwelf_elf_begin.os
+  CC       dwelf_elf_gnu_build_id.os
+  CC       dwelf_strtab.os
+  AR       libdwelf.a
+  AR       libdwelf_pic.a
+Making all in libdwfl
+  CC       dwfl_module.o
+  CC       dwfl_version.o
+  CC       dwfl_report_elf.o
+  CC       dwfl_error.o
+  CC       relocate.o
+  CC       dwfl_module_build_id.o
+  CC       dwfl_end.o
+  CC       dwfl_module_report_build_id.o
+  CC       segment.o
+  CC       offline.o
+  CC       dwfl_module_info.o
+  CC       dwfl_getmodules.o
+  CC       dwfl_getdwarf.o
+  CC       dwfl_begin.o
+  CC       dwfl_module_getdwarf.o
+  CC       derelocate.o
+  CC       dwfl_validate_address.o
+  CC       argp-std.o
+  CC       dwfl_module_getelf.o
+  CC       find-debuginfo.o
+  CC       dwfl_build_id_find_debuginfo.o
+  CC       linux-kernel-modules.o
+  CC       linux-proc-maps.o
+  CC       dwfl_build_id_find_elf.o
+  CC       dwfl_addrmodule.o
+  CC       cu.o
+  CC       dwfl_module_nextcu.o
+  CC       dwfl_addrdwarf.o
+  CC       dwfl_nextcu.o
+  CC       dwfl_cumodule.o
+  CC       dwfl_module_addrdie.o
+  CC       dwfl_addrdie.o
+  CC       lines.o
+  CC       dwfl_lineinfo.o
+  CC       dwfl_line_comp_dir.o
+  CC       dwfl_linemodule.o
+  CC       dwfl_linecu.o
+  CC       dwfl_dwarf_line.o
+  CC       dwfl_getsrclines.o
+  CC       dwfl_onesrcline.o
+  CC       dwfl_module_getsrc.o
+  CC       dwfl_getsrc.o
+  CC       dwfl_module_getsrc_file.o
+  CC       libdwfl_crc32.o
+  CC       libdwfl_crc32_file.o
+  CC       elf-from-memory.o
+  CC       dwfl_module_dwarf_cfi.o
+  CC       dwfl_module_eh_cfi.o
+  CC       dwfl_module_getsym.o
+  CC       dwfl_module_addrname.o
+  CC       dwfl_module_addrsym.o
+  CC       dwfl_module_return_value_location.o
+  CC       dwfl_module_register_names.o
+  CC       dwfl_segment_report_module.o
+  CC       link_map.o
+  CC       core-file.o
+  CC       open.o
+  CC       image-header.o
+  CC       dwfl_frame.o
+  CC       frame_unwind.o
+  CC       dwfl_frame_pc.o
+  CC       linux-pid-attach.o
+  CC       linux-core-attach.o
+  CC       dwfl_frame_regs.o
+  CC       gzip.o
+  CC       dwfl_begin.os
+  CC       dwfl_end.os
+  CC       dwfl_error.os
+  CC       dwfl_version.os
+  CC       dwfl_module.os
+  CC       dwfl_report_elf.os
+  CC       dwfl_module_build_id.os
+  CC       dwfl_module_report_build_id.os
+  CC       derelocate.os
+  CC       offline.os
+  CC       segment.os
+  CC       dwfl_module_info.os
+  CC       dwfl_getmodules.os
+  CC       dwfl_getdwarf.os
+  CC       dwfl_module_getelf.os
+  CC       dwfl_validate_address.os
+  CC       argp-std.os
+  CC       find-debuginfo.os
+  CC       dwfl_build_id_find_elf.os
+  CC       dwfl_build_id_find_debuginfo.os
+  CC       linux-kernel-modules.os
+  CC       linux-proc-maps.os
+  CC       dwfl_addrmodule.os
+  CC       dwfl_addrdwarf.os
+  CC       cu.os
+  CC       dwfl_module_nextcu.os
+  CC       dwfl_nextcu.os
+  CC       dwfl_cumodule.os
+  CC       dwfl_module_addrdie.os
+  CC       dwfl_addrdie.os
+  CC       lines.os
+  CC       dwfl_lineinfo.os
+  CC       dwfl_line_comp_dir.os
+  CC       dwfl_linemodule.os
+  CC       dwfl_linecu.os
+  CC       dwfl_dwarf_line.os
+  CC       dwfl_getsrclines.os
+  CC       dwfl_onesrcline.os
+  CC       dwfl_module_getsrc.os
+  CC       dwfl_getsrc.os
+  CC       dwfl_module_getsrc_file.os
+  CC       libdwfl_crc32.os
+  CC       libdwfl_crc32_file.os
+  CC       elf-from-memory.os
+  CC       dwfl_module_dwarf_cfi.os
+  CC       dwfl_module_eh_cfi.os
+  CC       dwfl_module_getsym.os
+  CC       dwfl_module_addrname.os
+  CC       dwfl_module_addrsym.os
+  CC       dwfl_module_return_value_location.os
+  CC       dwfl_module_register_names.os
+  CC       core-file.os
+  CC       open.os
+  CC       image-header.os
+  CC       dwfl_frame.os
+  CC       dwfl_frame_pc.os
+  CC       linux-pid-attach.os
+  CC       linux-core-attach.os
+  CC       dwfl_frame_regs.os
+  CC       gzip.os
+  CC       relocate.os
+  CC       dwfl_module_getdwarf.os
+  CC       link_map.os
+  CC       frame_unwind.os
+  CC       dwfl_segment_report_module.os
+  AR       libdwfl.a
+  AR       libdwfl_pic.a
+Making all in libdw
+make  all-am
+  CC       dwarf_getpubnames.o
+  CC       dwarf_getelf.o
+  CC       dwarf_getabbrev.o
+  CC       dwarf_tag.o
+  CC       dwarf_end.o
+  CC       dwarf_error.o
+  CC       dwarf_attr.o
+  CC       dwarf_diename.o
+  CC       dwarf_offdie.o
+  CC       dwarf_begin_elf.o
+  CC       dwarf_nextcu.o
+  CC       dwarf_formstring.o
+  CC       dwarf_attr_integrate.o
+  CC       dwarf_abbrev_hash.o
+  CC       dwarf_sig8_hash.o
+  CC       dwarf_hasattr_integrate.o
+  CC       dwarf_begin.o
+  CC       dwarf_child.o
+  CC       dwarf_haschildren.o
+  CC       dwarf_formudata.o
+  CC       dwarf_formsdata.o
+  CC       dwarf_formaddr.o
+  CC       dwarf_lowpc.o
+  CC       dwarf_entrypc.o
+  CC       dwarf_haspc.o
+  CC       dwarf_ranges.o
+  CC       dwarf_formref.o
+  CC       dwarf_highpc.o
+  CC       dwarf_formref_die.o
+  CC       dwarf_siblingof.o
+  CC       dwarf_dieoffset.o
+  CC       dwarf_cuoffset.o
+  CC       dwarf_diecu.o
+  CC       dwarf_hasattr.o
+  CC       dwarf_hasform.o
+  CC       dwarf_whatform.o
+  CC       dwarf_whatattr.o
+  CC       dwarf_bytesize.o
+  CC       dwarf_arrayorder.o
+  CC       dwarf_bitsize.o
+  CC       dwarf_bitoffset.o
+  CC       dwarf_srclang.o
+  CC       dwarf_getabbrevtag.o
+  CC       dwarf_getabbrevcode.o
+  CC       dwarf_abbrevhaschildren.o
+  CC       dwarf_getattrcnt.o
+  CC       dwarf_getabbrevattr.o
+  CC       dwarf_getsrclines.o
+  CC       dwarf_getsrc_die.o
+  CC       dwarf_getscopes.o
+  CC       dwarf_getscopes_die.o
+  CC       dwarf_getscopevar.o
+  CC       dwarf_linesrc.o
+  CC       dwarf_lineno.o
+  CC       dwarf_lineaddr.o
+  CC       dwarf_linecol.o
+  CC       dwarf_linebeginstatement.o
+  CC       dwarf_lineendsequence.o
+  CC       dwarf_lineblock.o
+  CC       dwarf_lineprologueend.o
+  CC       dwarf_lineepiloguebegin.o
+  CC       dwarf_lineisa.o
+  CC       dwarf_linediscriminator.o
+  CC       dwarf_lineop_index.o
+  CC       dwarf_line_file.o
+  CC       dwarf_onesrcline.o
+  CC       dwarf_formblock.o
+  CC       dwarf_getsrcfiles.o
+  CC       dwarf_filesrc.o
+  CC       dwarf_getsrcdirs.o
+  CC       dwarf_getlocation.o
+  CC       dwarf_getstring.o
+  CC       dwarf_offabbrev.o
+  CC       dwarf_getaranges.o
+  CC       dwarf_onearange.o
+  CC       dwarf_getarangeinfo.o
+  CC       dwarf_getarange_addr.o
+  CC       dwarf_getattrs.o
+  CC       dwarf_formflag.o
+  CC       dwarf_getmacros.o
+  CC       dwarf_macro_getparamcnt.o
+  CC       dwarf_macro_opcode.o
+  CC       dwarf_macro_param.o
+  CC       dwarf_macro_param1.o
+  CC       dwarf_macro_param2.o
+  CC       dwarf_macro_getsrcfiles.o
+  CC       dwarf_addrdie.o
+  CC       dwarf_getfuncs.o
+  CC       dwarf_decl_file.o
+  CC       dwarf_decl_line.o
+  CC       dwarf_decl_column.o
+  CC       dwarf_func_inline.o
+  CC       dwarf_getsrc_file.o
+  CC       libdw_findcu.o
+  CC       libdw_form.o
+  CC       libdw_alloc.o
+  CC       libdw_visit_scopes.o
+  CC       dwarf_entry_breakpoints.o
+  CC       dwarf_next_cfi.o
+  CC       cie.o
+  CC       cfi.o
+  CC       fde.o
+  CC       frame-cache.o
+  CC       dwarf_frame_info.o
+  CC       dwarf_frame_cfa.o
+  CC       dwarf_frame_register.o
+  CC       dwarf_cfi_addrframe.o
+  CC       dwarf_getcfi.o
+  CC       dwarf_getcfi_elf.o
+  CC       dwarf_cfi_end.o
+  CC       dwarf_aggregate_size.o
+  CC       dwarf_getlocation_implicit_pointer.o
+  CC       dwarf_getlocation_die.o
+  CC       dwarf_getlocation_attr.o
+  CC       dwarf_getalt.o
+  CC       dwarf_setalt.o
+  CC       dwarf_cu_getdwarf.o
+  CC       dwarf_cu_die.o
+  CC       dwarf_peel_type.o
+  CC       dwarf_default_lower_bound.o
+  CC       dwarf_die_addr_die.o
+  CC       dwarf_get_units.o
+  CC       libdw_find_split_unit.o
+  CC       dwarf_cu_info.o
+  CC       dwarf_next_lines.o
+  CC       dwarf_begin.os
+  CC       dwarf_begin_elf.os
+  CC       dwarf_getelf.os
+  CC       dwarf_end.os
+  CC       dwarf_getpubnames.os
+  CC       dwarf_getabbrev.os
+  CC       dwarf_tag.os
+  CC       dwarf_error.os
+  CC       dwarf_nextcu.os
+  CC       dwarf_diename.os
+  CC       dwarf_offdie.os
+  CC       dwarf_attr.os
+  CC       dwarf_formstring.os
+  CC       dwarf_abbrev_hash.os
+  CC       dwarf_sig8_hash.os
+  CC       dwarf_attr_integrate.os
+  CC       dwarf_hasattr_integrate.os
+  CC       dwarf_child.os
+  CC       dwarf_haschildren.os
+  CC       dwarf_formaddr.os
+  CC       dwarf_formudata.os
+  CC       dwarf_formsdata.os
+  CC       dwarf_lowpc.os
+  CC       dwarf_entrypc.os
+  CC       dwarf_haspc.os
+  CC       dwarf_highpc.os
+  CC       dwarf_ranges.os
+  CC       dwarf_formref.os
+  CC       dwarf_formref_die.os
+  CC       dwarf_siblingof.os
+  CC       dwarf_dieoffset.os
+  CC       dwarf_cuoffset.os
+  CC       dwarf_diecu.os
+  CC       dwarf_hasattr.os
+  CC       dwarf_hasform.os
+  CC       dwarf_whatform.os
+  CC       dwarf_whatattr.os
+  CC       dwarf_bytesize.os
+  CC       dwarf_arrayorder.os
+  CC       dwarf_bitsize.os
+  CC       dwarf_bitoffset.os
+  CC       dwarf_srclang.os
+  CC       dwarf_getabbrevtag.os
+  CC       dwarf_getabbrevcode.os
+  CC       dwarf_abbrevhaschildren.os
+  CC       dwarf_getattrcnt.os
+  CC       dwarf_getabbrevattr.os
+  CC       dwarf_getsrc_die.os
+  CC       dwarf_getscopes.os
+  CC       dwarf_getscopes_die.os
+  CC       dwarf_getscopevar.os
+  CC       dwarf_linesrc.os
+  CC       dwarf_lineno.os
+  CC       dwarf_lineaddr.os
+  CC       dwarf_linecol.os
+  CC       dwarf_linebeginstatement.os
+  CC       dwarf_lineendsequence.os
+  CC       dwarf_lineblock.os
+  CC       dwarf_lineprologueend.os
+  CC       dwarf_lineepiloguebegin.os
+  CC       dwarf_lineisa.os
+  CC       dwarf_linediscriminator.os
+  CC       dwarf_lineop_index.os
+  CC       dwarf_line_file.os
+  CC       dwarf_onesrcline.os
+  CC       dwarf_formblock.os
+  CC       dwarf_getsrcfiles.os
+  CC       dwarf_filesrc.os
+  CC       dwarf_getstring.os
+  CC       dwarf_getsrcdirs.os
+  CC       dwarf_offabbrev.os
+  CC       dwarf_onearange.os
+  CC       dwarf_getaranges.os
+  CC       dwarf_getarangeinfo.os
+  CC       dwarf_getarange_addr.os
+  CC       dwarf_getattrs.os
+  CC       dwarf_formflag.os
+  CC       dwarf_getmacros.os
+  CC       dwarf_macro_getparamcnt.os
+  CC       dwarf_macro_opcode.os
+  CC       dwarf_macro_param.os
+  CC       dwarf_macro_param1.os
+  CC       dwarf_macro_param2.os
+  CC       dwarf_macro_getsrcfiles.os
+  CC       dwarf_addrdie.os
+  CC       dwarf_getfuncs.os
+  CC       dwarf_decl_file.os
+  CC       dwarf_decl_line.os
+  CC       dwarf_decl_column.os
+  CC       dwarf_func_inline.os
+  CC       dwarf_getsrc_file.os
+  CC       libdw_findcu.os
+  CC       libdw_form.os
+  CC       libdw_alloc.os
+  CC       libdw_visit_scopes.os
+  CC       dwarf_entry_breakpoints.os
+  CC       dwarf_next_cfi.os
+  CC       cie.os
+  CC       fde.os
+  CC       frame-cache.os
+  CC       dwarf_frame_info.os
+  CC       dwarf_frame_cfa.os
+  CC       dwarf_frame_register.os
+  CC       dwarf_cfi_addrframe.os
+  CC       dwarf_getcfi.os
+  CC       dwarf_getcfi_elf.os
+  CC       dwarf_cfi_end.os
+  CC       dwarf_aggregate_size.os
+  CC       dwarf_getlocation_implicit_pointer.os
+  CC       dwarf_getlocation_die.os
+  CC       dwarf_getlocation_attr.os
+  CC       dwarf_setalt.os
+  CC       dwarf_getalt.os
+  CC       dwarf_cu_getdwarf.os
+  CC       dwarf_cu_die.os
+  CC       dwarf_peel_type.os
+  CC       dwarf_default_lower_bound.os
+  CC       dwarf_die_addr_die.os
+  CC       dwarf_get_units.os
+  CC       libdw_find_split_unit.os
+  CC       dwarf_cu_info.os
+  CC       dwarf_next_lines.os
+  CC       dwarf_getsrclines.os
+  CC       dwarf_getlocation.os
+  CC       cfi.os
+  AR       libdw.a
+  AR       libdw_pic.a
+  CCLD     libdw.so
+Making all in libcpu
+  GEN      x86_64_defs
+  CC       libcpu_bpf_a-bpf_disasm.o
+  GEN      i386_defs
+  GEN      i386.mnemonics
+  CC       i386_disasm.o
+  GEN      x86_64.mnemonics
+  CC       x86_64_disasm.o
+  AR       libcpu_bpf.a
+  AR       libcpu_i386.a
+  AR       libcpu_x86_64.a
+rm x86_64_defs i386_defs
+Making all in libasm
+  CC       asm_error.o
+  CC       asm_getelf.o
+  CC       asm_newscn.o
+  CC       asm_newscn_ingrp.o
+  CC       asm_end.o
+  CC       asm_newsubscn.o
+  CC       asm_newsym.o
+  CC       asm_abort.o
+  CC       asm_newabssym.o
+  CC       asm_scngrp_newsignature.o
+  CC       asm_fill.o
+  CC       asm_newcomsym.o
+  CC       asm_align.o
+  CC       asm_addstrz.o
+  CC       asm_newscngrp.o
+  CC       asm_begin.o
+  CC       asm_addint8.o
+  CC       asm_adduint16.o
+  CC       asm_addint16.o
+  CC       asm_adduint8.o
+  CC       asm_addint32.o
+  CC       asm_adduint32.o
+  CC       asm_addint64.o
+  CC       asm_adduint64.o
+  CC       asm_adduleb128.o
+  CC       asm_addsleb128.o
+  CC       disasm_begin.o
+  CC       disasm_cb.o
+  CC       disasm_str.o
+  CC       disasm_end.o
+  CC       symbolhash.o
+  CC       asm_error.os
+  CC       asm_getelf.os
+  CC       asm_scngrp_newsignature.os
+  CC       asm_newscn_ingrp.os
+  CC       asm_addint8.os
+  CC       asm_adduint8.os
+  CC       asm_addint16.os
+  CC       asm_adduint16.os
+  CC       asm_addint32.os
+  CC       asm_adduint32.os
+  CC       asm_addint64.os
+  CC       asm_adduint64.os
+  CC       asm_abort.os
+  CC       asm_newsubscn.os
+  CC       asm_newsym.os
+  CC       asm_newcomsym.os
+  CC       asm_newabssym.os
+  CC       asm_newscngrp.os
+  CC       asm_fill.os
+  CC       asm_align.os
+  CC       asm_addstrz.os
+  CC       asm_adduleb128.os
+  CC       asm_addsleb128.os
+  CC       disasm_begin.os
+  CC       disasm_end.os
+  CC       disasm_str.os
+  CC       asm_begin.os
+  CC       asm_newscn.os
+  CC       disasm_cb.os
+  CC       symbolhash.os
+  CC       asm_end.os
+  AR       libasm.a
+  AR       libasm_pic.a
+  CCLD     libasm.so
+Making all in backends
+  CC       i386_cfi.o
+  CC       i386_retval.o
+  CC       i386_regs.o
+  CC       i386_corenote.o
+  CC       i386_symbol.o
+  CC       i386_initreg.o
+  CC       sh_symbol.o
+  CC       i386_unwind.o
+  CC       i386_auxv.o
+  CC       i386_syscall.o
+  CC       sh_init.o
+  CC       sh_corenote.o
+  CC       sh_regs.o
+  CC       x86_64_init.o
+  CC       sh_retval.o
+  CC       x86_64_symbol.o
+  CC       i386_init.o
+  CC       x86_64_corenote.o
+  CC       x86_64_retval.o
+  CC       x86_64_regs.o
+  CC       x86_64_cfi.o
+  CC       x86_64_initreg.o
+  CC       x86_64_unwind.o
+  CC       x86_64_syscall.o
+  CC       x32_corenote.o
+  CC       ia64_init.o
+  CC       ia64_symbol.o
+  CC       ia64_regs.o
+  CC       ia64_retval.o
+  CC       alpha_init.o
+  CC       alpha_symbol.o
+  CC       alpha_retval.o
+  CC       alpha_regs.o
+  CC       alpha_corenote.o
+  CC       alpha_auxv.o
+  CC       arm_symbol.o
+  CC       arm_init.o
+  CC       arm_regs.o
+  CC       arm_corenote.o
+  CC       arm_auxv.o
+  CC       arm_attrs.o
+  CC       arm_retval.o
+  CC       arm_cfi.o
+  CC       arm_initreg.o
+  CC       aarch64_init.o
+  CC       aarch64_regs.o
+  CC       aarch64_symbol.o
+  CC       aarch64_corenote.o
+  CC       aarch64_retval.o
+  CC       aarch64_cfi.o
+  CC       aarch64_initreg.o
+  CC       aarch64_unwind.o
+  CC       sparc_init.o
+  CC       sparc_symbol.o
+  CC       sparc_regs.o
+  CC       sparc_retval.o
+  CC       sparc_corenote.o
+  CC       sparc64_corenote.o
+  CC       sparc_auxv.o
+  CC       sparc_attrs.o
+  CC       sparc_cfi.o
+  CC       sparc_initreg.o
+  CC       ppc_init.o
+  CC       ppc_symbol.o
+  CC       ppc_retval.o
+  CC       ppc_regs.o
+  CC       ppc_corenote.o
+  CC       ppc_auxv.o
+  CC       ppc_attrs.o
+  CC       ppc_syscall.o
+  CC       ppc_cfi.o
+  CC       ppc_initreg.o
+  CC       ppc64_init.o
+  CC       ppc64_symbol.o
+  CC       ppc64_retval.o
+  CC       ppc64_corenote.o
+  CC       ppc64_unwind.o
+  CC       ppc64_resolve_sym.o
+  CC       s390_init.o
+  CC       s390_symbol.o
+  CC       s390_regs.o
+  CC       s390_retval.o
+  CC       s390_corenote.o
+  CC       s390_initreg.o
+  CC       s390_cfi.o
+  CC       s390x_corenote.o
+  CC       s390_unwind.o
+  CC       tilegx_init.o
+  CC       tilegx_symbol.o
+  CC       tilegx_regs.o
+  CC       tilegx_retval.o
+  CC       tilegx_corenote.o
+  CC       m68k_init.o
+  CC       m68k_symbol.o
+  CC       m68k_regs.o
+  CC       m68k_corenote.o
+  CC       m68k_retval.o
+  CC       m68k_cfi.o
+  CC       m68k_initreg.o
+  CC       bpf_init.o
+  CC       bpf_regs.o
+  CC       bpf_symbol.o
+  CC       riscv_init.o
+  CC       riscv_symbol.o
+  CC       riscv_regs.o
+  CC       riscv_cfi.o
+  CC       riscv_initreg.o
+  CC       riscv_corenote.o
+  CC       riscv64_corenote.o
+  CC       riscv_retval.o
+  CC       i386_init.os
+  CC       i386_symbol.os
+  CC       i386_corenote.os
+  CC       i386_retval.os
+  CC       i386_cfi.os
+  CC       i386_regs.os
+  CC       i386_syscall.os
+  CC       i386_auxv.os
+  CC       i386_initreg.os
+  CC       i386_unwind.os
+  CC       sh_init.os
+  CC       sh_symbol.os
+  CC       sh_corenote.os
+  CC       sh_regs.os
+  CC       sh_retval.os
+  CC       x86_64_init.os
+  CC       x86_64_symbol.os
+  CC       x86_64_corenote.os
+  CC       x86_64_cfi.os
+  CC       x86_64_retval.os
+  CC       x86_64_regs.os
+  CC       x86_64_syscall.os
+  CC       x86_64_initreg.os
+  CC       x86_64_unwind.os
+  CC       x32_corenote.os
+  CC       ia64_init.os
+  CC       ia64_symbol.os
+  CC       ia64_regs.os
+  CC       ia64_retval.os
+  CC       alpha_init.os
+  CC       alpha_symbol.os
+  CC       alpha_retval.os
+  CC       alpha_regs.os
+  CC       alpha_corenote.os
+  CC       alpha_auxv.os
+  CC       arm_init.os
+  CC       arm_symbol.os
+  CC       arm_regs.os
+  CC       arm_corenote.os
+  CC       arm_auxv.os
+  CC       arm_attrs.os
+  CC       arm_retval.os
+  CC       arm_cfi.os
+  CC       arm_initreg.os
+  CC       aarch64_init.os
+  CC       aarch64_regs.os
+  CC       aarch64_symbol.os
+  CC       aarch64_corenote.os
+  CC       aarch64_retval.os
+  CC       aarch64_cfi.os
+  CC       aarch64_initreg.os
+  CC       aarch64_unwind.os
+  CC       sparc_init.os
+  CC       sparc_symbol.os
+  CC       sparc_regs.os
+  CC       sparc_retval.os
+  CC       sparc_corenote.os
+  CC       sparc64_corenote.os
+  CC       sparc_auxv.os
+  CC       sparc_attrs.os
+  CC       sparc_cfi.os
+  CC       sparc_initreg.os
+  CC       ppc_init.os
+  CC       ppc_symbol.os
+  CC       ppc_retval.os
+  CC       ppc_regs.os
+  CC       ppc_corenote.os
+  CC       ppc_auxv.os
+  CC       ppc_attrs.os
+  CC       ppc_syscall.os
+  CC       ppc_cfi.os
+  CC       ppc_initreg.os
+  CC       ppc64_init.os
+  CC       ppc64_symbol.os
+  CC       ppc64_retval.os
+  CC       ppc64_corenote.os
+  CC       ppc64_unwind.os
+  CC       ppc64_resolve_sym.os
+  CC       s390_init.os
+  CC       s390_symbol.os
+  CC       s390_regs.os
+  CC       s390_retval.os
+  CC       s390_corenote.os
+  CC       s390x_corenote.os
+  CC       s390_cfi.os
+  CC       s390_initreg.os
+  CC       s390_unwind.os
+  CC       tilegx_init.os
+  CC       tilegx_symbol.os
+  CC       tilegx_regs.os
+  CC       tilegx_retval.os
+  CC       tilegx_corenote.os
+  CC       m68k_init.os
+  CC       m68k_symbol.os
+  CC       m68k_regs.os
+  CC       m68k_retval.os
+  CC       m68k_corenote.os
+  CC       m68k_cfi.os
+  CC       m68k_initreg.os
+  CC       bpf_init.os
+  CC       bpf_regs.os
+  CC       bpf_symbol.os
+  CC       riscv_init.os
+  CC       riscv_symbol.os
+  CC       riscv_cfi.os
+  CC       riscv_regs.os
+  CC       riscv_initreg.os
+  CC       riscv_corenote.os
+  CC       riscv64_corenote.os
+  CC       riscv_retval.os
+  AR       libebl_i386_pic.a
+  AR       libebl_sh_pic.a
+  AR       libebl_x86_64_pic.a
+  AR       libebl_alpha_pic.a
+  AR       libebl_ia64_pic.a
+  AR       libebl_arm_pic.a
+  AR       libebl_aarch64_pic.a
+  AR       libebl_sparc_pic.a
+  AR       libebl_ppc_pic.a
+  AR       libebl_ppc64_pic.a
+  CCLD     libebl_i386.so
+  CCLD     libebl_x86_64.so
+  CCLD     libebl_sh.so
+  AR       libebl_s390_pic.a
+  CCLD     libebl_ia64.so
+  CCLD     libebl_alpha.so
+  CCLD     libebl_ppc.so
+  CCLD     libebl_arm.so
+  CCLD     libebl_aarch64.so
+  CCLD     libebl_sparc.so
+  CCLD     libebl_ppc64.so
+  CCLD     libebl_s390.so
+  AR       libebl_tilegx_pic.a
+  CCLD     libebl_tilegx.so
+  AR       libebl_m68k_pic.a
+  AR       libebl_bpf_pic.a
+  CCLD     libebl_m68k.so
+  CCLD     libebl_bpf.so
+  AR       libebl_riscv_pic.a
+  CCLD     libebl_riscv.so
+rm riscv_retval.o sparc_initreg.o ppc_cfi.o m68k_cfi.o x86_64_symbol.o ppc_auxv.o alpha_symbol.o arm_auxv.o m68k_symbol.o riscv_corenote.o i386_unwind.o sparc_symbol.o x86_64_syscall.o aarch64_init.o ppc_initreg.o i386_retval.o sparc_corenote.o sparc_cfi.o ppc_regs.o ppc_init.o s390_init.o ppc_syscall.o tilegx_symbol.o ia64_symbol.o i386_corenote.o m68k_corenote.o s390_cfi.o sh_regs.o i386_init.o ppc_corenote.o alpha_init.o i386_auxv.o riscv64_corenote.o m68k_init.o x32_corenote.o s390_initreg.o arm_attrs.o ppc64_resolve_sym.o x86_64_initreg.o ia64_init.o arm_initreg.o ppc64_retval.o x86_64_retval.o ia64_retval.o ppc64_unwind.o tilegx_init.o arm_cfi.o aarch64_initreg.o sparc_attrs.o i386_syscall.o arm_retval.o bpf_symbol.o arm_symbol.o x86_64_corenote.o aarch64_symbol.o s390_unwind.o aarch64_corenote.o alpha_corenote.o sparc64_corenote.o x86_64_cfi.o sh_symbol.o x86_64_init.o i386_regs.o ppc64_corenote.o s390_retval.o ppc_retval.o bpf_regs.o bpf_init.o ia64_regs.o alpha_retval.o arm_corenote.o aarch64_cfi.o aarch64_unwind.o sparc_init.o i386_initreg.o x86_64_unwind.o m68k_initreg.o aarch64_retval.o s390_corenote.o riscv_regs.o sparc_auxv.o riscv_symbol.o s390_symbol.o sparc_retval.o s390x_corenote.o riscv_init.o x86_64_regs.o sh_retval.o sh_corenote.o i386_cfi.o alpha_regs.o ppc64_symbol.o m68k_retval.o arm_regs.o aarch64_regs.o sparc_regs.o i386_symbol.o m68k_regs.o alpha_auxv.o ppc_symbol.o arm_init.o s390_regs.o tilegx_retval.o riscv_cfi.o ppc64_init.o ppc_attrs.o tilegx_regs.o tilegx_corenote.o riscv_initreg.o sh_init.o
+Making all in src
+  CC       readelf.o
+  CC       nm.o
+  CC       size.o
+  CC       strip.o
+  CC       elflint.o
+  CC       findtextrel.o
+  CC       addr2line.o
+  CC       elfcmp.o
+  CC       objdump.o
+  CC       ranlib.o
+  CC       arlib.o
+  CC       arlib2.o
+  CC       arlib-argp.o
+  CC       strings.o
+  CC       ar.o
+  CC       unstrip.o
+  CC       stack.o
+  CC       elfcompress.o
+  GEN      make-debug-archive
+  AR       libar.a
+  CCLD     ranlib
+  CCLD     findtextrel
+  CCLD     size
+  CCLD     strings
+  CCLD     addr2line
+  CCLD     stack
+  CCLD     objdump
+  CCLD     elfcmp
+  CCLD     nm
+  CCLD     elfcompress
+  CCLD     ar
+  CCLD     strip
+  CCLD     unstrip
+  CCLD     elflint
+  CCLD     readelf
+Making all in po
+make[2]: Nothing to be done for 'all'.
+Making all in tests
+make[2]: Nothing to be done for 'all'.

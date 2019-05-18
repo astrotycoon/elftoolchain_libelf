@@ -1,7 +1,8 @@
 .PHONY: all clean
 
 CC:=gcc
-CFLAGS:=-save-temps=obj -Wall -g3 -ggdb -fPIC -std=c99  -DHAVE_CONFIG_H -D_GNU_SOURCE  
+CFLAGS:=-save-temps=obj -Wall -g3 -ggdb -fPIC -std=gnu99 -DHAVE_CONFIG_H -D_GNU_SOURCE
+CFLAGS+=-fPIC -DPIC -DSHARED -DSYMBOL_VERSIONING
 CFLAGS+= -I. -I.. -I../lib
 LDFLAGS:=
 LDLIBS:=
@@ -134,7 +135,7 @@ all: $(exe)
 
 $(exe): $(objs)
 	$(AR) $(ARFLAGS) -o $@ $(objs) 
-	$(CC) -shared -o libelf.so $(objs)
+	$(CC) -shared -Wl,-z,relro -o libelf.so -Wl,--soname,libelf.so.1 -Wl,--version-script,libelf.map $(objs)
 
 $(objs): | $(objsdir)
 $(objsdir):
