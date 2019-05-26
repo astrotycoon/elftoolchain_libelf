@@ -28,7 +28,6 @@ static void print_strtbl(Elf_Scn *scn, size_t len)
 	}
 }
 
-
 int main(int argc, const char *argv[])
 {
 	int fd, class;
