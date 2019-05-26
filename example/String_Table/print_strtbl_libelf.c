@@ -70,7 +70,8 @@ int main(int argc, const char *argv[])
 		if (shdr.sh_type != SHT_STRTAB) continue;
 
 		
-		(void)printf("String dump of section '%s':\n", elf_strptr(pelf, shstrndx, shdr.sh_name));
+		(void)printf("String dump of section '%s':\n", 
+				elf_strptr(pelf, shstrndx, shdr.sh_name));
 		print_strtbl(scn, shdr.sh_size);
 		printf("\n");
 	}	
