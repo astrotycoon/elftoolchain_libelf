@@ -26,7 +26,7 @@ static void print_strtbl(const char *start, size_t len)
 	}
 }
  
-int main(int argc,	 const char *argv[])
+int main(int argc, char *argv[])
 {
 	int fd;
 	char *file_mmbase;
@@ -63,7 +63,8 @@ int main(int argc,	 const char *argv[])
 		ElfW(Shdr) *shdr = &shdrs[i];	
 		if (shdr->sh_type != SHT_STRTAB) continue;
 
-		(void)printf("String dump of section '%s':\n", file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name);
+		(void)printf("String dump of section '%s':\n", 
+				file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name);
 		print_strtbl(file_mmbase + shdrs[i].sh_offset, shdrs[i].sh_size);
 		(void)printf("\n");
 	}
