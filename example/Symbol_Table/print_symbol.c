@@ -148,7 +148,6 @@ int main(int argc, char *argv[])
 	for (size_t i = 0; i < shnum; i++) {
 		ElfW(Shdr) *shdr = &shdrs[i];	
 
-
 		if (shdr->sh_type == SHT_SYMTAB || shdr->sh_type == SHT_DYNSYM) {
 			shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
