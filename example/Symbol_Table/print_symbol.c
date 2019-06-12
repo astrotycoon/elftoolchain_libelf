@@ -68,7 +68,7 @@ static const char *st_shndx(unsigned int shndx)
 }
 
 static void print_syms(const char *shname, ElfW(Sym) *syms, 
-		size_t entries, const char *dynstr, const char *strtab)
+		size_t entries, const char *strtab)
 {
 	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
@@ -84,12 +84,7 @@ static void print_syms(const char *shname, ElfW(Sym) *syms,
 		printf(" %-6s", st_bind(ELF64_ST_BIND(sym->st_info)));
 		printf(" %-8s", st_vis(ELF64_ST_VISIBILITY(sym->st_other)));
 		printf(" %3s", st_shndx(sym->st_shndx));
-
-		if (strcmp(shname, ".dynsym") == 0) {
-			printf(" %s", dynstr + sym->st_name);
-		} else if (strcmp(shname, ".symtab") == 0) {
-			printf(" %s", strtab + sym->st_name);	
-		}
+		printf(" %s", strtab + sym->st_name);
 		printf("\n");
 	}
 }
@@ -102,7 +97,7 @@ int main(int argc, char *argv[])
 	size_t fsize;
 	ElfW(Ehdr) *ehdr;
 	ElfW(Shdr) *shdrs;
-	size_t shnum, shstrndx, dynstrndx, strtabndx;
+	size_t shnum, shstrndx;
 	const char *shname;
 
 //	[ 6] .dynstr           STRTAB          0000000000000468 000468 0000dd 00   A  0   0  1
@@ -135,26 +130,13 @@ int main(int argc, char *argv[])
 	for (size_t i = 0; i < shnum; i++) {
 		ElfW(Shdr) *shdr = &shdrs[i];	
 
-		shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
-
-		if (!strcmp(".dynstr", shname)) {
-			dynstrndx = i;	
-		}
-		if (!strcmp(".strtab", shname)) {
-			strtabndx = i;
-		}
-	}
-
-	for (size_t i = 0; i < shnum; i++) {
-		ElfW(Shdr) *shdr = &shdrs[i];	
-
 		if (shdr->sh_type == SHT_SYMTAB || shdr->sh_type == SHT_DYNSYM) {
 			shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
 			size_t entries = shdr->sh_size / shdr->sh_entsize;
-			const char *dynstr = file_mmbase + shdrs[dynstrndx].sh_offset;
-			const char *strtab = file_mmbase + shdrs[strtabndx].sh_offset;
-			print_syms(shname, syms, entries, dynstr, strtab);	
+			// sh_link -> .strtab or .dynstr
+			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
+			print_syms(shname, syms, entries, strtab);	
 		}
 	}
 
