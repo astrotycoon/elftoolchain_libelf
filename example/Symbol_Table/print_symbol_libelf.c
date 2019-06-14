@@ -72,6 +72,10 @@ static void print_syms(Elf *pelf, const char *shname, Elf_Scn *scn, size_t entri
 		errx(EXIT_FAILURE, "elf_getdata() failed: %s.", elf_errmsg(-1));	
 	}
 
+	if (data->d_type != ELF_T_SYM) {
+		errx(EXIT_FAILURE, "Elf_Type is not ELF_T_SYM.");	
+	}
+
 	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
 	    "Bind", "Vis", "Ndx", "Name");
