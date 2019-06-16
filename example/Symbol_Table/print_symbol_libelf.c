@@ -76,6 +76,10 @@ static void print_syms(Elf *pelf, const char *shname, Elf_Scn *scn, size_t entri
 		errx(EXIT_FAILURE, "Elf_Type is not ELF_T_SYM.");	
 	}
 
+	if (data->d_size <= 0) {
+		errx(EXIT_FAILURE, "Section data size is wrong.");	
+	}
+
 	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
 	    "Bind", "Vis", "Ndx", "Name");
@@ -103,7 +107,6 @@ int main(int argc, const char *argv[])
 	int fd, class;
 	Elf *pelf = NULL;
 	Elf_Scn *scn = NULL;
-	GElf_Shdr shdr;
 	size_t shstrndx;
 	const char *shname;
 
@@ -133,6 +136,7 @@ int main(int argc, const char *argv[])
 	}
 
 	while (scn = elf_nextscn(pelf, scn)) {
+		GElf_Shdr shdr;
 		if (gelf_getshdr(scn, &shdr) != &shdr) {
 			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));	
 		}

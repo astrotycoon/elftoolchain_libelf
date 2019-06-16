@@ -98,7 +98,6 @@ int main(int argc, char *argv[])
 	ElfW(Ehdr) *ehdr;
 	ElfW(Shdr) *shdrs;
 	size_t shnum, shstrndx;
-	const char *shname;
 
 //	[ 6] .dynstr           STRTAB          0000000000000468 000468 0000dd 00   A  0   0  1
 //	[32] .strtab           STRTAB          0000000000000000 003d28 000322 00      0   0  1
@@ -131,10 +130,12 @@ int main(int argc, char *argv[])
 		ElfW(Shdr) *shdr = &shdrs[i];	
 
 		if (shdr->sh_type == SHT_SYMTAB || shdr->sh_type == SHT_DYNSYM) {
-			shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
+			const char *shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
 			size_t entries = shdr->sh_size / shdr->sh_entsize;
-			// sh_link -> .strtab or .dynstr
+			// sh_info: One greater than the symbol table index of the last local symbol (binding STB_LOCAL).
+			// printf("shdr->sh_info = %u\n", shdr->sh_info);
+			// sh_link: .strtab or .dynstr (The section header index of the associated string table.)
 			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
 			print_syms(shname, syms, entries, strtab);	
 		}
