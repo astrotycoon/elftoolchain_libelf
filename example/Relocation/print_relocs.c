@@ -400,9 +400,9 @@ int main(int argc, char *argv[])
 			size_t symtab_entries = shdrs[symtabndx].sh_size / shdrs[symtabndx].sh_entsize;
 			// for SHT_SYMTAB or SHT_DYNSYM
 			// 		sh_info: One greater than the symbol table index 
-            //               of the last local symbol (binding STB_LOCAL).
+			//				 of the last local symbol (binding STB_LOCAL).
 			// 		sh_link: The section header index 
-            //               of the associated string table.
+			//				 of the associated string table.
 			size_t strtabndx = shdrs[symtabndx].sh_link;
 			const char *strtab = file_mmbase + shdrs[strtabndx].sh_offset; 
 
@@ -413,13 +413,13 @@ int main(int argc, char *argv[])
 				const char *destshdrname = file_mmbase 
                         + shdrs[shstrndx].sh_offset + destshdr->sh_name;
 				(void)printf("\nRelocation section [%2zu] '%s' "
-                    "for section [%2u] '%s' at offset 0x%jx contains %zu entries:\n",
+					"for section [%2u] '%s' at offset 0x%jx contains %zu entries:\n",
 					i, shname, shdr->sh_info, destshdrname,
 					(uintmax_t)shdr->sh_offset, reltab_entries);
 			} else {
 				// The .rel.dyn section does not refer to a specific section	
 				(void)printf("\nRelocation section [%2zu] '%s' "
-                    "at offset 0x%jx contains %zu entries:\n",
+					"at offset 0x%jx contains %zu entries:\n",
 					i, shname, (uintmax_t)shdr->sh_offset, reltab_entries);
 			}
 
