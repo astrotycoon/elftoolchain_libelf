@@ -11,135 +11,6 @@
 #include <error.h>
 #include <errno.h>
 
-static const char *st_type(unsigned int stype) 
-{
-	switch (stype) {
-		case STT_NOTYPE: return "NOTYPE";
-		case STT_OBJECT: return "OBJECT";
-		case STT_FUNC: return "FUNC";
-		case STT_SECTION: return "SECTION";
-		case STT_FILE: return "FILE";
-		case STT_COMMON: return "COMMON";
-		case STT_TLS: return "TLS";
-		case STT_LOOS ... STT_HIOS: return "OS_SPEC";
-		case STT_LOPROC ... STT_HIPROC: return "PROC_SPEC";
-		default: return "<unknown symbol type>";
-	}
-}
-
-static const char *st_bind(unsigned int stbind)
-{
-	switch (stbind) {
-		case STB_LOCAL: return "LOCAL";
-		case STB_GLOBAL: return "GLOBAL";
-		case STB_WEAK: return "WEAK";
-//		case STB_GNU_UNIQUE: return "UNIQUE";
-		case STB_LOOS ... STB_HIOS: return "OS";
-		case STB_LOPROC ... STB_HIPROC: return "PROC";
-		default: return "<unknown symbol bind>";
-	}
-}
-
-static const char *st_vis(unsigned int svis)
-{
-	switch (svis) {
-		case STV_DEFAULT: return "DEFAULT";
-		case STV_INTERNAL: return "INTERNAL";
-		case STV_HIDDEN: return "HIDDEN";
-		case STV_PROTECTED: return "PROTECTED";
-		default: return "<unknown symbol vis>";
-	}
-}
-
-static const char *st_shndx(unsigned int shndx)
-{
-	static char s_shndx[32];
-
-	switch (shndx) {
-		case SHN_UNDEF: return "UND";	
-		case SHN_ABS: return "ABS";
-		case SHN_COMMON: return "COMMON";
-		case SHN_LOPROC ... SHN_HIPROC: return "PRC";
-		case SHN_LOOS ... SHN_HIOS: return "OS";
-		default:  
-			(void)snprintf(s_shndx, sizeof(s_shndx), "%u", shndx); 
-			return (const char *)s_shndx;
-	}
-}
-
-static void print_syms(const char *shname, ElfW(Sym) *syms, 
-		size_t entries, const char *strtab)
-{
-	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
-	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
-	    "Bind", "Vis", "Ndx", "Name");
-
-	for (size_t i = 0; i < entries; i++) {
-		ElfW(Sym) *sym = &syms[i];
-	
-		printf("%6zu:", i);
-		printf(" %16.16jx", (uintmax_t)sym->st_value);
-		printf(" %5ju", (uintmax_t)sym->st_size);
-		printf(" %-7s", st_type(ELF64_ST_TYPE(sym->st_info)));
-		printf(" %-6s", st_bind(ELF64_ST_BIND(sym->st_info)));
-		printf(" %-8s", st_vis(ELF64_ST_VISIBILITY(sym->st_other)));
-		printf(" %3s", st_shndx(sym->st_shndx));
-		printf(" %s", strtab + sym->st_name);
-		printf("\n");
-	}
-}
-
-static const char *r_type32(unsigned int type)
-{}
-
-static const char *r_type64(unsigned int type)
-{
-	switch (type) {
-		case R_X86_64_NONE: return "R_X86_64_NONE";
-		case R_X86_64_64: return "R_X86_64_64";
-		case R_X86_64_PC32: return "R_X86_64_PC32";
-		case R_X86_64_GOT32: return "R_X86_64_GOT32";
-		case R_X86_64_PLT32: return "R_X86_64_PLT32";
-		case R_X86_64_COPY: return "R_X86_64_COPY";
-		case R_X86_64_GLOB_DAT: return "R_X86_64_GLOB_DAT";
-		case R_X86_64_JUMP_SLOT: return "R_X86_64_JUMP_SLOT";
-		case R_X86_64_RELATIVE: return "R_X86_64_RELATIVE";
-		case R_X86_64_GOTPCREL: return "R_X86_64_GOTPCREL";
-		case R_X86_64_32: return "R_X86_64_32";
-		case R_X86_64_32S: return "R_X86_64_32S";
-		case R_X86_64_16: return "R_X86_64_16";
-		case R_X86_64_PC16: return "R_X86_64_PC16";
-		case R_X86_64_8: return "R_X86_64_8";
-		case R_X86_64_PC8: return "R_X86_64_PC8";
-		case R_X86_64_DTPMOD64: return "R_X86_64_DTPMOD64";
-		case R_X86_64_DTPOFF64: return "R_X86_64_DTPOFF64";
-		case R_X86_64_TPOFF64: return "R_X86_64_TPOFF64";
-		case R_X86_64_TLSGD: return "R_X86_64_TLSGD";
-		case R_X86_64_TLSLD: return "R_X86_64_TLSLD";
-		case R_X86_64_DTPOFF32: return "R_X86_64_DTPOFF32";
-		case R_X86_64_GOTTPOFF: return "R_X86_64_GOTTPOFF";
-		case R_X86_64_TPOFF32: return "R_X86_64_TPOFF32";
-		case R_X86_64_PC64: return "R_X86_64_PC64";
-		case R_X86_64_GOTOFF64: return "R_X86_64_GOTOFF64";
-		case R_X86_64_GOTPC32: return "R_X86_64_GOTPC32";
-		case R_X86_64_GOT64: return "R_X86_64_GOT64";
-		case R_X86_64_GOTPCREL64: return "R_X86_64_GOTPCREL64";
-		case R_X86_64_GOTPC64: return "R_X86_64_GOTPC64";
-		case R_X86_64_GOTPLT64: return "R_X86_64_GOTPLT64";
-		case R_X86_64_PLTOFF64: return "R_X86_64_PLTOFF64";
-		case R_X86_64_SIZE32: return "R_X86_64_SIZE32";
-		case R_X86_64_SIZE64: return "R_X86_64_SIZE64";
-		case R_X86_64_GOTPC32_TLSDESC: return "R_X86_64_GOTPC32_TLSDESC";
-		case R_X86_64_TLSDESC_CALL: return "R_X86_64_TLSDESC_CALL";
-		case R_X86_64_TLSDESC: return "R_X86_64_TLSDESC";
-		case R_X86_64_IRELATIVE: return "R_X86_64_IRELATIVE";
-		case R_X86_64_RELATIVE64: return "R_X86_64_RELATIVE64";
-		case R_X86_64_GOTPCRELX: return "R_X86_64_GOTPCRELX";
-		case R_X86_64_REX_GOTPCRELX: return "R_X86_64_REX_GOTPCRELX";
-	}
-	return NULL;
-}
-
 static const char *r_type(unsigned int machine, unsigned int type)
 {
 	switch (machine) {
@@ -406,7 +277,6 @@ static const char *r_type(unsigned int machine, unsigned int type)
 	return NULL;
 }
 
-
 static void print_rel(ElfW(Rel) *rels, size_t reltab_entries, 
 		ElfW(Sym) *symtab, size_t symtab_entries, 
 		const char *strtab, int class, int machine)
@@ -558,20 +428,6 @@ int main(int argc, char *argv[])
 				print_rela(relas, reltab_entries, symtab, symtab_entries, strtab, class, machine);	
 			}
 		}
-
-		
-
-//
-//		if (shdr->sh_type == SHT_SYMTAB || shdr->sh_type == SHT_DYNSYM) {
-//			const char *shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
-//			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
-//			size_t entries = shdr->sh_size / shdr->sh_entsize;
-//			// sh_info: One greater than the symbol table index of the last local symbol (binding STB_LOCAL).
-//			// printf("shdr->sh_info = %u\n", shdr->sh_info);
-//			// sh_link: .strtab or .dynstr (The section header index of the associated string table.)
-//			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
-//			print_syms(shname, syms, entries, strtab);	
-//		}
 	}
 
 	(void)munmap(file_mmbase, fsize);
