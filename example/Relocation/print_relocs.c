@@ -386,8 +386,10 @@ int main(int argc, char *argv[])
 
   			// Get the symbol table information. 
 			// for SHT_REL or SHT_RELA:
-			// 		sh_link: The section header index of the associated symbol table.
-			// 		sh_info: The section header index of the section to which the relocation applies.
+			// 		sh_link: The section header index 
+			// 				of the associated symbol table.
+			// 		sh_info: The section header index 
+			// 		        of the section to which the relocation applies.
 			size_t symtabndx = shdr->sh_link;
 			if (shdrs[symtabndx].sh_type != SHT_SYMTAB
 					&& shdrs[symtabndx].sh_type != SHT_DYNSYM) {
@@ -397,8 +399,10 @@ int main(int argc, char *argv[])
 			ElfW(Sym) *symtab = (ElfW(Sym *))(file_mmbase + shdrs[symtabndx].sh_offset);
 			size_t symtab_entries = shdrs[symtabndx].sh_size / shdrs[symtabndx].sh_entsize;
 			// for SHT_SYMTAB or SHT_DYNSYM
-			// 		sh_info: One greater than the symbol table index of the last local symbol (binding STB_LOCAL).
-			// 		sh_link: The section header index of the associated string table.
+			// 		sh_info: One greater than the symbol table index 
+			// 				 of the last local symbol (binding STB_LOCAL).
+			// 		sh_link: The section header index 
+			// 		         of the associated string table.
 			size_t strtabndx = shdrs[symtabndx].sh_link;
 			const char *strtab = file_mmbase + shdrs[strtabndx].sh_offset; 
 
@@ -406,26 +410,29 @@ int main(int argc, char *argv[])
 
 			if (shdr->sh_info != 0) {
 				ElfW(Shdr) *destshdr = &shdrs[shdr->sh_info];
-				const char *destshdrname = file_mmbase + shdrs[shstrndx].sh_offset + destshdr->sh_name;
+				const char *destshdrname = file_mmbase 
+							+ shdrs[shstrndx].sh_offset + destshdr->sh_name;
 				(void)printf("\nRelocation section [%2zu] '%s' "
-						"for section [%2u] '%s' at offset 0x%jx contains %zu entries:\n",
-						i, shname, shdr->sh_info, destshdrname,
-						(uintmax_t)shdr->sh_offset, reltab_entries);
+                    "for section [%2u] '%s' at offset 0x%jx contains %zu entries:\n",
+					i, shname, shdr->sh_info, destshdrname,
+					(uintmax_t)shdr->sh_offset, reltab_entries);
 			} else {
 				// The .rel.dyn section does not refer to a specific section	
 				(void)printf("\nRelocation section [%2zu] '%s' "
-						"at offset 0x%jx contains %zu entries:\n",
-						i, shname, (uintmax_t)shdr->sh_offset, reltab_entries);
+                    "at offset 0x%jx contains %zu entries:\n",
+					i, shname, (uintmax_t)shdr->sh_offset, reltab_entries);
 			}
 
 			if (shdr->sh_type == SHT_REL) {
 				ElfW(Rel) *rels = (ElfW(Rel) *)(file_mmbase + shdr->sh_offset);
-				print_rel(rels, reltab_entries, symtab, symtab_entries, strtab, class, machine);
+				print_rel(rels, reltab_entries, 
+			        symtab, symtab_entries, strtab, class, machine);
 			}
 
 			if (shdr->sh_type == SHT_RELA) {
 				ElfW(Rela) *relas = (ElfW(Rela) *)(file_mmbase + shdr->sh_offset);
-				print_rela(relas, reltab_entries, symtab, symtab_entries, strtab, class, machine);	
+				print_rela(relas, reltab_entries, 
+			        symtab, symtab_entries, strtab, class, machine);	
 			}
 		}
 	}
