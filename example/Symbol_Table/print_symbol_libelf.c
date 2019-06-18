@@ -64,7 +64,8 @@ static const char *st_shndx(unsigned int shndx)
 	}
 }
 
-static void print_syms(Elf *pelf, const char *shname, Elf_Scn *scn, size_t entries, size_t strndx)
+static void print_syms(Elf *pelf, const char *shname, 
+		Elf_Scn *scn, size_t entries, size_t strndx, size_t shstrndx)
 {
 	Elf_Data *data;
 	
@@ -93,12 +94,24 @@ static void print_syms(Elf *pelf, const char *shname, Elf_Scn *scn, size_t entri
 		printf("%6zu:", i);
 		printf(" %16.16jx", (uintmax_t)sym.st_value);
 		printf(" %5ju", (uintmax_t)sym.st_size);
-		printf(" %-7s", st_type(ELF64_ST_TYPE(sym.st_info)));
-		printf(" %-6s", st_bind(ELF64_ST_BIND(sym.st_info)));
-		printf(" %-8s", st_vis(ELF64_ST_VISIBILITY(sym.st_other)));
+		printf(" %-7s", st_type(GELF_ST_TYPE(sym.st_info)));
+		printf(" %-6s", st_bind(GELF_ST_BIND(sym.st_info)));
+		printf(" %-8s", st_vis(GELF_ST_VISIBILITY(sym.st_other)));
 		printf(" %3s", st_shndx(sym.st_shndx));
-		printf(" %s", elf_strptr(pelf, strndx, sym.st_name));
-		printf("\n");
+		if (strcmp("SECTION", st_type(GELF_ST_TYPE(sym.st_info))) == 0) {
+			Elf_Scn *destscn;
+			GElf_Shdr destshdr;
+		   
+			if ((destscn = elf_getscn(pelf, sym.st_shndx)) == NULL) {
+				errx(EXIT_FAILURE, "elf_getscn() failed: %s.", elf_errmsg(-1));	
+			}
+			if (gelf_getshdr(destscn, &destshdr) != &destshdr) {
+				errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));	
+			}
+			printf(" %s\n", elf_strptr(pelf, shstrndx, destshdr.sh_name));
+		} else {
+			printf(" %s\n", elf_strptr(pelf, strndx, sym.st_name));
+		}
 	}
 }
 
@@ -146,8 +159,12 @@ int main(int argc, const char *argv[])
 				errx(EXIT_FAILURE, "elf_strptr() failed: %s.", elf_errmsg(-1));	
 			}
 			size_t entries = shdr.sh_size / shdr.sh_entsize;
-			// sh_link -> .strtab or .dynstr 
-			print_syms(pelf, shname, scn, entries, shdr.sh_link);
+			// sh_info: One greater than the symbol table index of 
+			// 			the last local symbol (binding STB_LOCAL).
+			// printf("shdr->sh_info = %u\n", shdr->sh_info);
+			// sh_link: .strtab or .dynstr (The section header index of 
+			// 			the associated string table.)
+			print_syms(pelf, shname, scn, entries, shdr.sh_link, shstrndx);
 		}
 	}	
 
