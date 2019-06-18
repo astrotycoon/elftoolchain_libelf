@@ -11,6 +11,10 @@
 #include <error.h>
 #include <errno.h>
 
+#define ELFW(type)	_ELFW (ELF, __ELF_NATIVE_CLASS, type)
+#define _ELFW(e,w,t)	_ELFW_1 (e, w, _##t)
+#define _ELFW_1(e,w,t)	e##w##t
+
 static const char *st_type(unsigned int stype) 
 {
 	switch (stype) {
@@ -67,8 +71,8 @@ static const char *st_shndx(unsigned int shndx)
 	}
 }
 
-static void print_syms(const char *shname, ElfW(Sym) *syms, 
-		size_t entries, const char *strtab)
+static void print_syms(ElfW(Shdr) *shdrs, const char *shstrtab,  
+		const char *shname, ElfW(Sym) *syms, size_t entries, const char *strtab)
 {
 	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
@@ -80,11 +84,15 @@ static void print_syms(const char *shname, ElfW(Sym) *syms,
 		printf("%6zu:", i);
 		printf(" %16.16jx", (uintmax_t)sym->st_value);
 		printf(" %5ju", (uintmax_t)sym->st_size);
-		printf(" %-7s", st_type(ELF64_ST_TYPE(sym->st_info)));
-		printf(" %-6s", st_bind(ELF64_ST_BIND(sym->st_info)));
-		printf(" %-8s", st_vis(ELF64_ST_VISIBILITY(sym->st_other)));
+		printf(" %-7s", st_type(ELFW(ST_TYPE)(sym->st_info)));
+		printf(" %-6s", st_bind(ELFW(ST_BIND)(sym->st_info)));
+		printf(" %-8s", st_vis(ELFW(ST_VISIBILITY)(sym->st_other)));
 		printf(" %3s", st_shndx(sym->st_shndx));
-		printf(" %s", strtab + sym->st_name);
+		if (strcmp("SECTION", st_type(ELFW(ST_TYPE)(sym->st_info))) == 0) {
+			printf(" %s", shstrtab + shdrs[sym->st_shndx].sh_name);	
+		} else {
+			printf(" %s", strtab + sym->st_name);
+		}
 		printf("\n");
 	}
 }
@@ -98,6 +106,7 @@ int main(int argc, char *argv[])
 	ElfW(Ehdr) *ehdr;
 	ElfW(Shdr) *shdrs;
 	size_t shnum, shstrndx;
+	const char *shstrtab;
 
 //	[ 6] .dynstr           STRTAB          0000000000000468 000468 0000dd 00   A  0   0  1
 //	[32] .strtab           STRTAB          0000000000000000 003d28 000322 00      0   0  1
@@ -125,19 +134,20 @@ int main(int argc, char *argv[])
 	shdrs = (ElfW(Shdr) *)(file_mmbase + ehdr->e_shoff);
 	shnum = ehdr->e_shnum == 0 ? shdrs[0].sh_size : ehdr->e_shnum;
 	shstrndx = ehdr->e_shstrndx == SHN_XINDEX ? shdrs[0].sh_link : ehdr->e_shstrndx;
+	shstrtab = file_mmbase + shdrs[shstrndx].sh_offset;
 
 	for (size_t i = 0; i < shnum; i++) {
 		ElfW(Shdr) *shdr = &shdrs[i];	
 
 		if (shdr->sh_type == SHT_SYMTAB || shdr->sh_type == SHT_DYNSYM) {
-			const char *shname = file_mmbase + shdrs[shstrndx].sh_offset + shdr->sh_name;
+			const char *shname = shstrtab + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
 			size_t entries = shdr->sh_size / shdr->sh_entsize;
 			// sh_info: One greater than the symbol table index of the last local symbol (binding STB_LOCAL).
 			// printf("shdr->sh_info = %u\n", shdr->sh_info);
 			// sh_link: .strtab or .dynstr (The section header index of the associated string table.)
 			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
-			print_syms(shname, syms, entries, strtab);	
+			print_syms(shdrs, shstrtab, shname, syms, entries, strtab);	
 		}
 	}
 
