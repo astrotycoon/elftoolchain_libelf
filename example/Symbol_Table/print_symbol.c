@@ -143,9 +143,11 @@ int main(int argc, char *argv[])
 			const char *shname = shstrtab + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
 			size_t entries = shdr->sh_size / shdr->sh_entsize;
-			// sh_info: One greater than the symbol table index of the last local symbol (binding STB_LOCAL).
+			// sh_info: One greater than the symbol table index of 
+			// 			the last local symbol (binding STB_LOCAL).
 			// printf("shdr->sh_info = %u\n", shdr->sh_info);
-			// sh_link: .strtab or .dynstr (The section header index of the associated string table.)
+			// sh_link: .strtab or .dynstr (The section header index of 
+			// 			the associated string table.)
 			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
 			print_syms(shdrs, shstrtab, shname, syms, entries, strtab);	
 		}
