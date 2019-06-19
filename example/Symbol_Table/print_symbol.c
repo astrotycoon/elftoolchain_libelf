@@ -74,7 +74,7 @@ static const char *st_shndx(unsigned int shndx)
 static void print_syms(ElfW(Shdr) *shdrs, const char *shstrtab,  
 		const char *shname, ElfW(Sym) *syms, size_t entries, const char *strtab)
 {
-	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
+	printf("\nSymbol table '%s' contains %zu entries:\n", shname, entries);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
 	    "Bind", "Vis", "Ndx", "Name");
 
@@ -88,12 +88,11 @@ static void print_syms(ElfW(Shdr) *shdrs, const char *shstrtab,
 		printf(" %-6s", st_bind(ELFW(ST_BIND)(sym->st_info)));
 		printf(" %-8s", st_vis(ELFW(ST_VISIBILITY)(sym->st_other)));
 		printf(" %3s", st_shndx(sym->st_shndx));
-		if (strcmp("SECTION", st_type(ELFW(ST_TYPE)(sym->st_info))) == 0) {
-			printf(" %s", shstrtab + shdrs[sym->st_shndx].sh_name);	
+		if (ELFW(ST_TYPE)(sym->st_info) == STT_SECTION) {
+			printf(" %s\n", shstrtab + shdrs[sym->st_shndx].sh_name);	
 		} else {
-			printf(" %s", strtab + sym->st_name);
+			printf(" %s\n", strtab + sym->st_name);
 		}
-		printf("\n");
 	}
 }
  
@@ -108,10 +107,9 @@ int main(int argc, char *argv[])
 	size_t shnum, shstrndx;
 	const char *shstrtab;
 
-//	[ 6] .dynstr           STRTAB          0000000000000468 000468 0000dd 00   A  0   0  1
-//	[32] .strtab           STRTAB          0000000000000000 003d28 000322 00      0   0  1
-//	[33] .shstrtab         STRTAB          0000000000000000 00404a 00013e 00      0   0  1
- 
+	// [ 5] .dynsym           DYNSYM          00000000000002b8 0002b8 0001b0 18   A  6   1  8
+	// [26] .symtab           SYMTAB          0000000000000000 002040 0007b0 18     27  50  8
+
 	if (argc != 2) {
 		error(EXIT_FAILURE, 0, "Usage: %s file-name", argv[0]);
 	}

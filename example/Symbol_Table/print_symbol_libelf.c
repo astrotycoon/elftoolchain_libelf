@@ -64,30 +64,85 @@ static const char *st_shndx(unsigned int shndx)
 	}
 }
 
-static void print_syms(Elf *pelf, const char *shname, 
-		Elf_Scn *scn, size_t entries, size_t strndx, size_t shstrndx)
+static const char *get_symbol_name(Elf *pelf, size_t strtabndx, GElf_Sym *sym)
 {
-	Elf_Data *data;
+	if (GELF_ST_TYPE(sym->st_info) == STT_SECTION) {
+		// get shstrndx
+		size_t shstrndx;
+		if (elf_getshdrstrndx(pelf, &shstrndx) == -1) {
+			errx(EXIT_FAILURE, "getshdrstrndx() failed: %s.", elf_errmsg(-1));	
+		}
 	
-	if ((data = elf_getdata(scn, NULL)) == NULL) {
+		Elf_Scn *destscn;
+		GElf_Shdr destshdr;
+	   
+		if ((destscn = elf_getscn(pelf, sym->st_shndx)) == NULL) {
+			errx(EXIT_FAILURE, "elf_getscn() failed: %s.", elf_errmsg(-1));	
+		}
+		if (gelf_getshdr(destscn, &destshdr) != &destshdr) {
+			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));	
+		}
+		return elf_strptr(pelf, shstrndx, destshdr.sh_name);
+	}
+	
+	return  elf_strptr(pelf, strtabndx, sym->st_name);	
+}
+
+static void print_syms(Elf *pelf, Elf_Scn *symscn, GElf_Shdr *symshdr)
+{
+	Elf_Data *symdata;
+
+	if ((symdata = elf_getdata(symscn, NULL)) == NULL) {
 		errx(EXIT_FAILURE, "elf_getdata() failed: %s.", elf_errmsg(-1));	
 	}
 
-	if (data->d_type != ELF_T_SYM) {
+	if (symdata->d_type != ELF_T_SYM) {
 		errx(EXIT_FAILURE, "Elf_Type is not ELF_T_SYM.");	
 	}
 
-	if (data->d_size <= 0) {
+	if (symdata->d_size <= 0) {
 		errx(EXIT_FAILURE, "Section data size is wrong.");	
 	}
 
-	printf("Symbol table '%s' contains %zu entries:\n", shname, entries);
+	assert(symshdr->sh_size == symdata->d_size);
+
+	// get shstrndx
+	size_t shstrndx;
+	if (elf_getshdrstrndx(pelf, &shstrndx) == -1) {
+		errx(EXIT_FAILURE, "getshdrstrndx() failed: %s.", elf_errmsg(-1));	
+	}
+
+	const char *symshdrname = elf_strptr(pelf, shstrndx, symshdr->sh_name);
+	if (symshdrname == NULL) {
+		errx(EXIT_FAILURE, "elf_strptr() failed: %s,", elf_errmsg(-1));	
+	}
+
+	size_t entries; 
+
+#if 1
+	// 1
+	entries = symshdr->sh_size / symshdr->sh_entsize;
+#endif
+
+#if 0
+	// 2 
+	size_t entsize = gelf_fsize(pelf, ELF_T_SYM, 1, EV_CURRENT); 
+	entries = symshdr->sh_size / entsize;
+#endif
+	
+#if 1
+	// 3
+	size_t entsize = gelf_fsize(pelf, ELF_T_SYM, 1, EV_CURRENT); 
+	entries = symdata->d_size / entsize;
+#endif
+
+	printf("\nSymbol table '%s' contains %zu entries:\n", symshdrname, entries);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
 	    "Bind", "Vis", "Ndx", "Name");
 
 	for (size_t i = 0; i < entries; i++) {
 		GElf_Sym sym;
-		if (gelf_getsym(data, i, &sym) != &sym) {
+		if (gelf_getsym(symdata, i, &sym) != &sym) {
 			errx(EXIT_FAILURE, "gelf_getsym() failed: %s.", elf_errmsg(-1));
 		}
 
@@ -98,20 +153,13 @@ static void print_syms(Elf *pelf, const char *shname,
 		printf(" %-6s", st_bind(GELF_ST_BIND(sym.st_info)));
 		printf(" %-8s", st_vis(GELF_ST_VISIBILITY(sym.st_other)));
 		printf(" %3s", st_shndx(sym.st_shndx));
-		if (strcmp("SECTION", st_type(GELF_ST_TYPE(sym.st_info))) == 0) {
-			Elf_Scn *destscn;
-			GElf_Shdr destshdr;
-		   
-			if ((destscn = elf_getscn(pelf, sym.st_shndx)) == NULL) {
-				errx(EXIT_FAILURE, "elf_getscn() failed: %s.", elf_errmsg(-1));	
-			}
-			if (gelf_getshdr(destscn, &destshdr) != &destshdr) {
-				errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));	
-			}
-			printf(" %s\n", elf_strptr(pelf, shstrndx, destshdr.sh_name));
-		} else {
-			printf(" %s\n", elf_strptr(pelf, strndx, sym.st_name));
-		}
+		// sh_info: One greater than the symbol table index of 
+		// 			the last local symbol (binding STB_LOCAL).
+		// printf("shdr->sh_info = %u\n", shdr->sh_info);
+		// sh_link: .strtab or .dynstr (The section header index of 
+		// 			the associated string table.)
+		// print_syms(pelf, shname, scn, entries, shdr.sh_link, shstrndx);
+		printf(" %s\n", get_symbol_name(pelf, symshdr->sh_link, &sym));	
 	}
 }
 
@@ -143,10 +191,6 @@ int main(int argc, const char *argv[])
 	if ((class = gelf_getclass(pelf)) == ELFCLASSNONE)
 		errx(EXIT_FAILURE, "getclass() failed: %s.", elf_errmsg(-1));
 
-	// get shstrndx
-	if (elf_getshdrstrndx(pelf, &shstrndx) == -1) {
-		errx(EXIT_FAILURE, "getshdrstrndx() failed: %s.", elf_errmsg(-1));	
-	}
 
 	while (scn = elf_nextscn(pelf, scn)) {
 		GElf_Shdr shdr;
@@ -155,16 +199,7 @@ int main(int argc, const char *argv[])
 		}
 
 		if (shdr.sh_type == SHT_SYMTAB || shdr.sh_type == SHT_DYNSYM) {
-			if (!(shname = elf_strptr(pelf, shstrndx, shdr.sh_name))) {
-				errx(EXIT_FAILURE, "elf_strptr() failed: %s.", elf_errmsg(-1));	
-			}
-			size_t entries = shdr.sh_size / shdr.sh_entsize;
-			// sh_info: One greater than the symbol table index of 
-			// 			the last local symbol (binding STB_LOCAL).
-			// printf("shdr->sh_info = %u\n", shdr->sh_info);
-			// sh_link: .strtab or .dynstr (The section header index of 
-			// 			the associated string table.)
-			print_syms(pelf, shname, scn, entries, shdr.sh_link, shstrndx);
+			print_syms(pelf, scn, &shdr);
 		}
 	}	
 
