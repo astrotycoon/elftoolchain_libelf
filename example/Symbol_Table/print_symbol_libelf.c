@@ -70,22 +70,22 @@ static const char *get_symbol_name(Elf *pelf, size_t strtabndx, GElf_Sym *sym)
 		// get shstrndx
 		size_t shstrndx;
 		if (elf_getshdrstrndx(pelf, &shstrndx) == -1) {
-			errx(EXIT_FAILURE, "getshdrstrndx() failed: %s.", elf_errmsg(-1));	
+			errx(EXIT_FAILURE, "getshdrstrndx() failed: %s.", elf_errmsg(-1));
 		}
 	
 		Elf_Scn *destscn;
 		GElf_Shdr destshdr;
 	   
 		if ((destscn = elf_getscn(pelf, sym->st_shndx)) == NULL) {
-			errx(EXIT_FAILURE, "elf_getscn() failed: %s.", elf_errmsg(-1));	
+			errx(EXIT_FAILURE, "elf_getscn() failed: %s.", elf_errmsg(-1));
 		}
 		if (gelf_getshdr(destscn, &destshdr) != &destshdr) {
-			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));	
+			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));
 		}
 		return elf_strptr(pelf, shstrndx, destshdr.sh_name);
 	}
 	
-	return  elf_strptr(pelf, strtabndx, sym->st_name);	
+	return  elf_strptr(pelf, strtabndx, sym->st_name);
 }
 
 static void print_syms(Elf *pelf, Elf_Scn *symscn, GElf_Shdr *symshdr)
@@ -93,7 +93,7 @@ static void print_syms(Elf *pelf, Elf_Scn *symscn, GElf_Shdr *symshdr)
 	Elf_Data *symdata;
 
 	if ((symdata = elf_getdata(symscn, NULL)) == NULL) {
-		errx(EXIT_FAILURE, "elf_getdata() failed: %s.", elf_errmsg(-1));	
+		errx(EXIT_FAILURE, "elf_getdata() failed: %s.", elf_errmsg(-1));
 	}
 
 	if (symdata->d_type != ELF_T_SYM) {
@@ -158,7 +158,6 @@ static void print_syms(Elf *pelf, Elf_Scn *symscn, GElf_Shdr *symshdr)
 		// printf("shdr->sh_info = %u\n", shdr->sh_info);
 		// sh_link: .strtab or .dynstr (The section header index of 
 		// 			the associated string table.)
-		// print_syms(pelf, shname, scn, entries, shdr.sh_link, shstrndx);
 		printf(" %s\n", get_symbol_name(pelf, symshdr->sh_link, &sym));	
 	}
 }
@@ -168,8 +167,6 @@ int main(int argc, const char *argv[])
 	int fd, class;
 	Elf *pelf = NULL;
 	Elf_Scn *scn = NULL;
-	size_t shstrndx;
-	const char *shname;
 
 	if (argc != 2)
 		errx(EXIT_FAILURE, "usage: %s file-name", argv[0]);
@@ -195,7 +192,7 @@ int main(int argc, const char *argv[])
 	while (scn = elf_nextscn(pelf, scn)) {
 		GElf_Shdr shdr;
 		if (gelf_getshdr(scn, &shdr) != &shdr) {
-			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));	
+			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));
 		}
 
 		if (shdr.sh_type == SHT_SYMTAB || shdr.sh_type == SHT_DYNSYM) {
