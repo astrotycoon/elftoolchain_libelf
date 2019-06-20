@@ -119,7 +119,7 @@ static void print_syms(Elf *pelf, Elf_Scn *symscn, GElf_Shdr *symshdr)
 
 	size_t entries; 
 
-#if 1
+#if 0
 	// 1
 	entries = symshdr->sh_size / symshdr->sh_entsize;
 #endif
@@ -188,8 +188,7 @@ int main(int argc, const char *argv[])
 	if ((class = gelf_getclass(pelf)) == ELFCLASSNONE)
 		errx(EXIT_FAILURE, "getclass() failed: %s.", elf_errmsg(-1));
 
-
-	while (scn = elf_nextscn(pelf, scn)) {
+	while ((scn = elf_nextscn(pelf, scn)) != NULL) {
 		GElf_Shdr shdr;
 		if (gelf_getshdr(scn, &shdr) != &shdr) {
 			errx(EXIT_FAILURE, "gelf_getshdr() failed: %s.", elf_errmsg(-1));
