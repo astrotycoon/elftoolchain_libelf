@@ -1,7 +1,7 @@
 .PHONY: all clean
 
 CC:=gcc
-CFLAGS:=-save-temps=obj -Wall -g3 -ggdb -fPIC  
+CFLAGS:=-save-temps=obj -Wall -g3 -ggdb 
 CFLAGS+= -I. -I../common
 LDFLAGS:=
 LDLIBS:=
@@ -72,7 +72,6 @@ all: $(exe)
 
 $(exe): common m4s $(objs)
 	$(AR) $(ARFLAGS) -o $@ $(objs) 
-	$(CC) -shared -o libelf.so $(objs)
 
 common:
 	../common/native-elf-format > ../common/native-elf-format.h || rm ../common/native-elf-format.h	
