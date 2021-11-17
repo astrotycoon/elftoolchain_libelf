@@ -71,14 +71,14 @@ static const char *st_shndx(unsigned int shndx)
 	}
 }
 
-static void print_syms(ElfW(Shdr) *shdrs, const char *shstrtab,  
-		const char *shname, ElfW(Sym) *syms, size_t entries, const char *strtab)
+static void print_syms(ElfW(Shdr) *shdrs, Elf32_Word *p_symtab_shndx_arr, const char *shstrtab,  
+		const char *shname, ElfW(Sym) *syms, size_t sym_nums, const char *strtab)
 {
-	printf("\nSymbol table '%s' contains %zu entries:\n", shname, entries);
+	printf("\nSymbol table '%s' contains %zu entries:\n", shname, sym_nums);
 	printf("%7s%9s%14s%5s%8s%6s%9s%5s\n", "Num:", "Value", "Size", "Type",
 	    "Bind", "Vis", "Ndx", "Name");
 
-	for (size_t i = 0; i < entries; i++) {
+	for (size_t i = 0; i < sym_nums; i++) {
 		ElfW(Sym) *sym = &syms[i];
 	
 		printf("%6zu:", i);
@@ -87,7 +87,11 @@ static void print_syms(ElfW(Shdr) *shdrs, const char *shstrtab,
 		printf(" %-7s", st_type(ELFW(ST_TYPE)(sym->st_info)));
 		printf(" %-6s", st_bind(ELFW(ST_BIND)(sym->st_info)));
 		printf(" %-8s", st_vis(ELFW(ST_VISIBILITY)(sym->st_other)));
-		printf(" %3s", st_shndx(sym->st_shndx));
+		if (sym->st_shndx == SHN_XINDEX && p_symtab_shndx_arr) {
+			printf(" %3s", st_shndx((unsigned int)p_symtab_shndx_arr[i]));	
+		} else {
+			printf(" %3s", st_shndx(sym->st_shndx));
+		}
 		if (ELFW(ST_TYPE)(sym->st_info) == STT_SECTION) {
 			printf(" %s\n", shstrtab + shdrs[sym->st_shndx].sh_name);	
 		} else {
@@ -133,6 +137,7 @@ int main(int argc, char *argv[])
 	shnum = ehdr->e_shnum == 0 ? shdrs[0].sh_size : ehdr->e_shnum;
 	shstrndx = ehdr->e_shstrndx == SHN_XINDEX ? shdrs[0].sh_link : ehdr->e_shstrndx;
 	shstrtab = file_mmbase + shdrs[shstrndx].sh_offset;
+	ElfW(Shdr) *symtab_shndx_shdr = NULL;
 
 	for (size_t i = 0; i < shnum; i++) {
 		ElfW(Shdr) *shdr = &shdrs[i];	
@@ -140,14 +145,30 @@ int main(int argc, char *argv[])
 		if (shdr->sh_type == SHT_SYMTAB || shdr->sh_type == SHT_DYNSYM) {
 			const char *shname = shstrtab + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
-			size_t entries = shdr->sh_size / shdr->sh_entsize;
+			size_t sym_nums = shdr->sh_size / shdr->sh_entsize;
+			Elf32_Word *p_symtab_shndx_arr = NULL;
+
+
+			size_t j = shnum;
+			while (j--) {
+				// sh_link: The section header index of the associated symbol table.
+				ElfW(Shdr) *shdr = &shdrs[j];
+				if (shdr->sh_type == SHT_SYMTAB_SHNDX && shdr->sh_link == i) {
+					size_t entries = shdr->sh_size / shdr->sh_entsize;
+					if (entries != sym_nums) {
+						error(EXIT_FAILURE, errno, "sym_nums and no of symtab_shndx_arr not match!!!");
+					}
+					p_symtab_shndx_arr = (Elf32_Word *)(file_mmbase + shdr->sh_offset);
+				}
+			}
 			// sh_info: One greater than the symbol table index of 
 			// 			the last local symbol (binding STB_LOCAL).
 			// printf("shdr->sh_info = %u\n", shdr->sh_info);
 			// sh_link: .strtab or .dynstr (The section header index of 
 			// 			the associated string table.)
 			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
-			print_syms(shdrs, shstrtab, shname, syms, entries, strtab);	
+			print_syms(shdrs, p_symtab_shndx_arr, shstrtab, shname, syms, sym_nums, strtab);	
+			symtab_shndx_shdr = NULL;
 		}
 	}
 
