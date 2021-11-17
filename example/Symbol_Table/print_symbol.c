@@ -137,7 +137,6 @@ int main(int argc, char *argv[])
 	shnum = ehdr->e_shnum == 0 ? shdrs[0].sh_size : ehdr->e_shnum;
 	shstrndx = ehdr->e_shstrndx == SHN_XINDEX ? shdrs[0].sh_link : ehdr->e_shstrndx;
 	shstrtab = file_mmbase + shdrs[shstrndx].sh_offset;
-	ElfW(Shdr) *symtab_shndx_shdr = NULL;
 
 	for (size_t i = 0; i < shnum; i++) {
 		ElfW(Shdr) *shdr = &shdrs[i];	
@@ -168,7 +167,6 @@ int main(int argc, char *argv[])
 			// 			the associated string table.)
 			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
 			print_syms(shdrs, p_symtab_shndx_arr, shstrtab, shname, syms, sym_nums, strtab);	
-			symtab_shndx_shdr = NULL;
 		}
 	}
 
