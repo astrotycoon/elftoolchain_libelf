@@ -71,7 +71,7 @@ static const char *st_shndx(unsigned int shndx)
 	}
 }
 
-static void print_syms(ElfW(Shdr) *shdrs, Elf32_Word *p_symtab_shndx_arr, const char *shstrtab,  
+static void print_syms(ElfW(Shdr) *shdrs, Elf32_Word *symtab_shndx_arr, const char *shstrtab,  
 		const char *shname, ElfW(Sym) *syms, size_t sym_nums, const char *strtab)
 {
 	printf("\nSymbol table '%s' contains %zu entries:\n", shname, sym_nums);
@@ -87,8 +87,8 @@ static void print_syms(ElfW(Shdr) *shdrs, Elf32_Word *p_symtab_shndx_arr, const 
 		printf(" %-7s", st_type(ELFW(ST_TYPE)(sym->st_info)));
 		printf(" %-6s", st_bind(ELFW(ST_BIND)(sym->st_info)));
 		printf(" %-8s", st_vis(ELFW(ST_VISIBILITY)(sym->st_other)));
-		if (sym->st_shndx == SHN_XINDEX && p_symtab_shndx_arr) {
-			printf(" %3s", st_shndx((unsigned int)p_symtab_shndx_arr[i]));	
+		if (sym->st_shndx == SHN_XINDEX && symtab_shndx_arr) {
+			printf(" %3s", st_shndx((unsigned int)symtab_shndx_arr[i]));	
 		} else {
 			printf(" %3s", st_shndx(sym->st_shndx));
 		}
@@ -145,19 +145,20 @@ int main(int argc, char *argv[])
 			const char *shname = shstrtab + shdr->sh_name;
 			ElfW(Sym) *syms = (ElfW(Sym *))(file_mmbase + shdr->sh_offset); 
 			size_t sym_nums = shdr->sh_size / shdr->sh_entsize;
-			Elf32_Word *p_symtab_shndx_arr = NULL;
-
+			Elf32_Word *symtab_shndx_arr = NULL;
 
 			size_t j = shnum;
+			// Look through the sections in reverse order, on the theory that it
+			// is more likely to be near the end than the beginning.
 			while (j--) {
 				// sh_link: The section header index of the associated symbol table.
-				ElfW(Shdr) *shdr = &shdrs[j];
-				if (shdr->sh_type == SHT_SYMTAB_SHNDX && shdr->sh_link == i) {
+				ElfW(Shdr) *runshdr = &shdrs[j];
+				if (runshdr->sh_type == SHT_SYMTAB_SHNDX && runshdr->sh_link == i) {
 					size_t entries = shdr->sh_size / shdr->sh_entsize;
 					if (entries != sym_nums) {
 						error(EXIT_FAILURE, errno, "sym_nums and no of symtab_shndx_arr not match!!!");
 					}
-					p_symtab_shndx_arr = (Elf32_Word *)(file_mmbase + shdr->sh_offset);
+					symtab_shndx_arr = (Elf32_Word *)(file_mmbase + shdr->sh_offset);
 				}
 			}
 			// sh_info: One greater than the symbol table index of 
@@ -166,7 +167,8 @@ int main(int argc, char *argv[])
 			// sh_link: .strtab or .dynstr (The section header index of 
 			// 			the associated string table.)
 			const char *strtab = file_mmbase + shdrs[shdr->sh_link].sh_offset;
-			print_syms(shdrs, p_symtab_shndx_arr, shstrtab, shname, syms, sym_nums, strtab);	
+			print_syms(shdrs, symtab_shndx_arr, shstrtab, shname, syms, sym_nums, strtab);
+			symtab_shndx_arr = NULL;
 		}
 	}
 
